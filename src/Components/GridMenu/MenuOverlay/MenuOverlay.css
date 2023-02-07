@@ -1,0 +1,25 @@
+.grid-menu-container {
+
+}
+
+.grid-menu-container .grid-menu {
+
+}
+
+.grid-menu-container .grid-menu .grid-nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 80vw;
+    height: 90vh;
+}
+
+.item {
+    /* border-radius: 100%; */
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border: 2px solid black;
+}

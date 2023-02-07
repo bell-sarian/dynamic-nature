@@ -1,0 +1,7 @@
+.grid-item-container {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background-color: red;
+    border: 1px solid black;
+}

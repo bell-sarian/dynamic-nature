@@ -1,0 +1,10 @@
+.grid-menu-container {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-menu-container .menu-grid-button:hover {
+    transition: all .2s ease;
+    opacity: .8;
+    transform: scale(1.05);
+}
