@@ -1,6 +1,7 @@
 import React, { Component, useState } from "react";
+import styles from './Sun.css';
 
-export default function Block(props)  {
+export default function Sun(props)  {
   const [isHovering, setIsHovering] = useState(false);
   const handleMouseEnter = () => {
     setIsHovering(true);
@@ -10,22 +11,23 @@ export default function Block(props)  {
     setIsHovering(false);
   };
 
+
   const stylesHover = {
 
   }
   
   return (
       <div 
-        className="block" 
+        className="sun" 
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{
           backgroundColor: props.blockColor, 
-          opacity: isHovering ? .90 : 1,
+          opacity: isHovering ? .80 : 1,
           transition: "opacity .7s", 
           height: props.blockHeight, 
           width: props.blockWidth, 
-          zIndex: 9, 
+          zIndex: 9999, 
           display: "flex", 
           flexDirection: "row" 
         }}
