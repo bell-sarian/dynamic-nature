@@ -1,0 +1,23 @@
+.ocean-sunset-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+    
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 100px;
+    z-index: 0;
+}
+
+.ocean-sunset-container .row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.cursor {
+    transform: scale(1.4);
+    mix-blend-mode: difference;
+    background: white;
+  }
