@@ -1,7 +1,7 @@
 .ocean-sunset-container {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    /* justify-content: start; */
     
     width: 100%;
     position: absolute;
@@ -11,36 +11,13 @@
     z-index: 0;
 }
 
-.ocean-sunset-container .wave-1-1 {
-    width: 100vw;
-    height: 2vw;
-    background-color: #764F62;
-    z-index: 9999;
+.ocean-sunset-container .row-container {
+    display: flex;
+    flex-direction: row;
 }
 
-.ocean-sunset-container .wave-2-1 {
-    width: 100vw;
-    height: 4vw;
-    background-color: #6E475A;
-    z-index: 9999;
-}
-
-.ocean-sunset-container .wave-3-1 {
-    width: 100vw;
-    height: 3vw;
-    background-color: #6A4356;
-    z-index: 9999;
-}
-
-.ocean-sunset-container .wave-4-1 {
-    width: 100vw;
-    height: 3vw;
-    background-color: #634456;
-    z-index: 9999;
-}
-.ocean-sunset-container .wave-5-1 {
-    width: 100vw;
-    height: 5vw;
-    background-color: #60445A;
-    z-index: 9999;
-}
+.cursor {
+    transform: scale(1.4);
+    mix-blend-mode: difference;
+    background: white;
+  }

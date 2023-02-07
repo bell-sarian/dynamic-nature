@@ -4,32 +4,55 @@ import Block from "./Block/Block";
 
 export default function OceanSunset()  {
 
-    const colors = {
-        "1-1": {"color": "#764F62", "width": "100vw", "height": "2vw"},
-        "2-1": {"color": "#6E475A", "width": "100vw", "height": "4vw"},
-        "3-1": {"color": "#6A4356", "width": "100vw", "height": "3vw"},
-        "4-1": {"color": "#634456", "width": "100vw", "height": "3vw"},
-        "5-1": {"color": "#60445A", "width": "100vw", "height": "5vw"},
-        "6-1": {"color": "#60445A", "width": "100vw", "height": "5vw"},
-    }
+    const colors = [
+        [{"color": "#764F62", "width": "100vw", "height": "2vw"}],
+        [{"color": "#6E475A", "width": "100vw", "height": "4vw"}],
+        [{"color": "#6A4356", "width": "100vw", "height": "3vw"}],
+        [{"color": "#634456", "width": "100vw", "height": "3vw"}],
+        [{"color": "#60445A", "width": "100vw", "height": "5vw"}],
+        [{"color": "#54475B", "width": "100vw", "height": "2vw"}],
+        [{"color": "#4D4D5F", "width": "100vw", "height": "4vw"}],
+        [{"color": "#454E5D", "width": "100vw", "height": "5vw"}],
+        [{"color": "#70646A", "width": "100vw", "height": "1vw"}],
+        [{"color": "#866B6A", "width": "100vw", "height": "2vw"}],
+        [{"color": "#52504E", "width": "3vw", "height": "2vw"},
+          {"color": "#4B5052", "width": "9vw", "height": "2vw"},
+          {"color": "#2D3238", "width": "5vw", "height": "2vw"},
+          {"color": "#5C6D81", "width": "20vw", "height": "2vw"},
+          {"color": "#6E7D8E", "width": "63vw", "height": "2vw"},
+        ],
+        [{"color": "#675D5C", "width": "3vw", "height": "1vw"},
+          {"color": "#59514F", "width": "12vw", "height": "1vw"},
+          {"color": "#43444B", "width": "4vw", "height": "1vw"},
+          {"color": "#465666", "width": "35vw", "height": "1vw"},
+          {"color": "#667486", "width": "46vw", "height": "1vw"},
+        ],
+        [{"color": "#635959", "width": "9vw", "height": "2vw"},
+          {"color": "#59514F", "width": "30vw", "height": "2vw"},
+          {"color": "#465666", "width": "25vw", "height": "2vw"},
+          {"color": "#526373", "width": "36vw", "height": "2vw"},
+        ],
+        
+    ]
 
-    const renderBlock = () => {
-      let blocks = [];
-
-      for (let i = 0; i < colors.length() ; i++) {
-        break;
-      }
-    }
+    
     return (
       <div className="ocean-sunset-container">
-        {/* <Block blockColor={colors["1-1"]} blockWidth={"100vw"} blockHeight={"2vw"} /> */}
-        <Block blockColor={colors["1-1"]["color"]} blockWidth={colors["1-1"]["width"]} blockHeight={colors["1-1"]["height"]} />
-        <Block blockColor={colors["2-1"]["color"]} blockWidth={colors["2-1"]["width"]} blockHeight={colors["2-1"]["height"]} />
-        <Block blockColor={colors["3-1"]["color"]} blockWidth={colors["3-1"]["width"]} blockHeight={colors["3-1"]["height"]} />
-        <Block blockColor={colors["4-1"]["color"]} blockWidth={colors["4-1"]["width"]} blockHeight={colors["4-1"]["height"]} />
-        <Block blockColor={colors["5-1"]["color"]} blockWidth={colors["5-1"]["width"]} blockHeight={colors["5-1"]["height"]} />
-        <Block blockColor={colors["6-1"]["color"]} blockWidth={colors["6-1"]["width"]} blockHeight={colors["6-1"]["height"]} />
         
+        {colors.map((items, index) => {
+          
+          return (
+            <div className="row-container">
+              {items.map((subItems, subIndex) => {
+
+                return (
+                  <Block blockColor={subItems.color} blockWidth={subItems.width} blockHeight={subItems.height} blockHover={subItems.hoverColor}/>
+                )
+              })}
+            </div>
+          )
+        })}
+              
       </div>
     );
   
