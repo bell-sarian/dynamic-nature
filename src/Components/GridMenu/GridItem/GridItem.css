@@ -1,7 +1,10 @@
 .grid-item-container {
-    width: 20vw;
-    height: 20vw;
+    width: 200vw;
+    height: 200vw;
     border-radius: 50%;
     background-color: red;
+    color: blue;
     border: 1px solid black;
+    font-size: 200px;
+    z-index: 9999999;
 }

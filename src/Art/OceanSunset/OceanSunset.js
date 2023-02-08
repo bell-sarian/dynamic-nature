@@ -84,11 +84,11 @@ export default function OceanSunset()  {
         {colors.map((items, index) => {
           
           return (
-            <div className="row-container">
+            <div key={index} className="row-container">
               {items.map((subItems, subIndex) => {
 
                 return (
-                  <Block blockColor={subItems.color} blockWidth={subItems.width} blockHeight={subItems.height} blockHover={subItems.hoverColor}/>
+                  <Block key={subIndex}  blockColor={subItems.color} blockWidth={subItems.width} blockHeight={subItems.height} blockHover={subItems.hoverColor}/>
                 )
               })}
             </div>

@@ -1,7 +1,5 @@
-import { Opacity } from "@mui/icons-material";
-import { color } from "@mui/system";
+
 import React, { Component, useState } from "react";
-import { Transition } from "react-transition-group";
 import Styles from "./MenuOverlay.css";
 import {
     createBrowserRouter,
@@ -9,6 +7,7 @@ import {
   } from "react-router-dom";
 
 import OceanSunset from "../../../Art/OceanSunset/OceanSunset";
+import App from "../../../App";
 // import OceanSunsetPreview from "../../../../Assets/OceanSunsetPreview";
 import GridItem from "../GridItem/GridItem";
 
@@ -21,54 +20,63 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
         left: 0,
         width: "100vw",
         height: "100vh",
-        zIndex:-1,
+        zIndex:-100,
         backgroundColor: "#ffffff7f",
         opacity: 50,
         transform: "translateY(0%)",
-        transition: "all .2s ease-in-out",
+        transition: "all .5s ease-in-out",
         color: "red"
     }
 
     const stylesClosed = {
+        visibility: "hidden",
         left: 0,
+        top: 0,
         width: "100vw",
         height: "100vh",
         position: "absolute",
-        transform: "translateY(-1000%)",
-        transition: "all .2s ease-in-out",
+        transform: "translateY(-100%)",
+        transition: "all .5s ease-in-out",
     }
 
     const menuItems = ([
-        {
+        {  
+            name: "Home",
+            path: "/",
+            element: <App />,
+            imagePreview: null
+        },
+        {  
+            name: "Ocean Sunset",
             path: "/OceanSunset",
             element: <OceanSunset />,
             imagePreview: null
         },
         {
-            path: "/OceanSunset",
-            element: <OceanSunset />,
+            name: "About",
+            path: "/About",
+            element: <App />,
             imagePreview: null
           },
       ]);
+
     
     return (
-      <div 
-        className="grid-menu-container"
-        style={menuOpen ? stylesOpen : stylesClosed}
-
+        <div
+            className="grid-menu-container"
+            style={menuOpen ? stylesOpen : stylesClosed}
         >
-        <div className="grid-menu"> 
-            <nav
-                className="grid-nav-menu"
-            >
-                {/* <div className="item"></div> */}
-                {menuItems.map((item, index) => {
-                    <GridItem itemLink={item.path} itemElement={item.element} itemImage={item.imagePreview} />
-                })
-                    
-                }
-            </nav>
+
+            {menuItems.map((item, index) => {
+                return (
+                    <a href={item.path}>{item.name}</a>
+                )
+            })}
+        <div class="overlay-content">
+            <a href="/OceanSunset">Ocean Sunset</a>
+
         </div>
+        
               
       </div>
     );

@@ -21,7 +21,7 @@ function App() {
         </a>
       </header> */}
       <body>
-        <NavBar/>
+        {/* <NavBar/> */}
         <OceanSunset />
       </body>
     </div>
