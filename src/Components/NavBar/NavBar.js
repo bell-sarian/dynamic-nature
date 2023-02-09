@@ -3,6 +3,7 @@ import Styles from "./NavBar.css";
 import GridIcon from "../../Assets/grid_icon.svg";
 import GridMenu from "../GridMenu/GridMenu";
 import { color } from "@mui/system";
+import { Link } from "react-router-dom";
 
 
 export default function NavBar()  {
@@ -15,8 +16,8 @@ export default function NavBar()  {
         <div className="menu-about">
             <div>BSW</div>
         </div>
-        <div className="menu-web-name">DYNAMIC NATURE</div>
-        
+        <Link to="/Home" className="menu-web-name">DYNAMIC NATURE</Link>
+
         <GridMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </div>
     );

@@ -46,7 +46,7 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
             name: "HOME",
             path: "/",
             element: <App />,
-            styles: "radial-gradient(circle, rgba(255,81,89,1) 0%, rgba(210,114,123,1) 30%, rgba(110,125,142,1) 99%)"
+            styles: "radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(120,120,120,1) 100%)"
         },
         {  
             name: "OCEAN SUNSET",
@@ -58,7 +58,7 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
             name: "ABOUT",
             path: "/About",
             element: <About />,
-            styles: "radial-gradient(circle, rgba(255,81,89,1) 0%, rgba(210,114,123,1) 30%, rgba(110,125,142,1) 99%)"
+            styles: "radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(68,9,121,1) 35%, rgba(120,120,120,1) 100%)"
           },
       ]);
 
