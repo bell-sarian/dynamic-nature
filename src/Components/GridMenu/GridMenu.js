@@ -5,8 +5,7 @@ import GridOpenIcon from "../../Assets/grid_open_icon.svg";
 import MenuOverlay from "./MenuOverlay/MenuOverlay";
 
 
-export default function GridMenu()  {
-    const [menuOpen, setMenuOpen] = useState(false);
+export default function GridMenu({menuOpen, setMenuOpen})  {
 
     return (
       <div className="grid-menu-container">

@@ -7,29 +7,14 @@
 }
 
 .grid-menu-container .grid-menu .grid-nav-menu {
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-shrink: 3;
 
-    width: 80vw;
-    height: 90vh;
+
+    width: 900vw;
+    height: 900vh;
 }
 
-.item {
-    /* border-radius: 100%; */
-    width: 150px;
-    height: 150px;
-    background-color: red;
-    border: 2px solid black;
-}
-
-.example {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 200px;
-    color: red;
-    border: 30px solid red;
-    z-index: 9999999999999999;
-}

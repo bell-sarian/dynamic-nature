@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 import OceanSunset from './Art/OceanSunset/OceanSunset';
 import NavBar from './Components/NavBar/NavBar';
+import Home from './Pages/Home/Home';
+import About from './Pages/About/About';
 
 const router = createBrowserRouter([
   {
@@ -22,12 +24,17 @@ const router = createBrowserRouter([
     element: <OceanSunset />,
     errorElement: <ErrorPage />
   },
+  {
+    path: "/About",
+    element: <About />,
+    errorElement: <ErrorPage />
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <NavBar />
+    <NavBar/>
     <RouterProvider router={router} />
   </React.StrictMode>
 );

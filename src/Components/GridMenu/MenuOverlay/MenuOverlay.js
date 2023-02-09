@@ -8,7 +8,7 @@ import {
 
 import OceanSunset from "../../../Art/OceanSunset/OceanSunset";
 import App from "../../../App";
-// import OceanSunsetPreview from "../../../../Assets/OceanSunsetPreview";
+import OceanSunsetPreview from "../../../Assets/OceanSunsetPreview.png";
 import GridItem from "../GridItem/GridItem";
 
 
@@ -44,19 +44,19 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
             name: "Home",
             path: "/",
             element: <App />,
-            imagePreview: null
+            styles: null
         },
         {  
             name: "Ocean Sunset",
             path: "/OceanSunset",
             element: <OceanSunset />,
-            imagePreview: null
+            styles: "radial-gradient(circle, #FF5159 0%, #FF3E5F 35%, #6E475A 100%)"
         },
         {
             name: "About",
             path: "/About",
             element: <App />,
-            imagePreview: null
+            styles: null
           },
       ]);
 
@@ -69,11 +69,12 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
 
             {menuItems.map((item, index) => {
                 return (
-                    <a href={item.path}>{item.name}</a>
+                    <GridItem key={index} path={item.path} name={item.name} styles={item.styles}  />
+                    // <a href={item.path}>{item.name}</a>
                 )
             })}
-        <div class="overlay-content">
-            <a href="/OceanSunset">Ocean Sunset</a>
+        <div className="overlay-content">
+            {/* <a href="/OceanSunset">Ocean Sunset</a> */}
 
         </div>
         

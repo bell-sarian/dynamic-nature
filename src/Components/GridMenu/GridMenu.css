@@ -1,6 +1,7 @@
 .grid-menu-container {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .grid-menu-container .menu-grid-button:hover {
