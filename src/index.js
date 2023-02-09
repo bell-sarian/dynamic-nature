@@ -7,6 +7,7 @@ import ErrorPage from './error-page';
 import {
   createBrowserRouter,
   RouterProvider,
+  BrowserRouter
 } from "react-router-dom";
 import OceanSunset from './Art/OceanSunset/OceanSunset';
 import NavBar from './Components/NavBar/NavBar';
@@ -34,8 +35,12 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <NavBar/>
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <NavBar />
+      <App />
+      {/* <OceanSunset />
+      <About /> */}
+    </BrowserRouter>
   </React.StrictMode>
 );
 

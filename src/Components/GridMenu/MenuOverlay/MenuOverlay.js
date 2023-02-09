@@ -8,7 +8,9 @@ import {
 
 import OceanSunset from "../../../Art/OceanSunset/OceanSunset";
 import App from "../../../App";
-import OceanSunsetPreview from "../../../Assets/OceanSunsetPreview.png";
+import About from "../../../Pages/About/About";
+import Home from "../../../Pages/Home/Home";
+
 import GridItem from "../GridItem/GridItem";
 
 
@@ -21,7 +23,7 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
         width: "100vw",
         height: "100vh",
         zIndex:-100,
-        backgroundColor: "#ffffff7f",
+        backgroundColor: "#0000007f",
         opacity: 50,
         transform: "translateY(0%)",
         transition: "all .5s ease-in-out",
@@ -41,22 +43,22 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
 
     const menuItems = ([
         {  
-            name: "Home",
+            name: "HOME",
             path: "/",
             element: <App />,
-            styles: null
+            styles: "radial-gradient(circle, rgba(255,81,89,1) 0%, rgba(210,114,123,1) 30%, rgba(110,125,142,1) 99%)"
         },
         {  
-            name: "Ocean Sunset",
+            name: "OCEAN SUNSET",
             path: "/OceanSunset",
             element: <OceanSunset />,
-            styles: "radial-gradient(circle, #FF5159 0%, #FF3E5F 35%, #6E475A 100%)"
+            styles: "radial-gradient(circle, rgba(255,81,89,1) 0%, rgba(210,114,123,1) 30%, rgba(110,125,142,1) 99%)"
         },
         {
-            name: "About",
+            name: "ABOUT",
             path: "/About",
-            element: <App />,
-            styles: null
+            element: <About />,
+            styles: "radial-gradient(circle, rgba(255,81,89,1) 0%, rgba(210,114,123,1) 30%, rgba(110,125,142,1) 99%)"
           },
       ]);
 
@@ -65,6 +67,7 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
         <div
             className="grid-menu-container"
             style={menuOpen ? stylesOpen : stylesClosed}
+            onClick={() => setMenuOpen(false)} // close menu on select outside of designated buttons
         >
 
             {menuItems.map((item, index) => {
@@ -73,10 +76,7 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
                     // <a href={item.path}>{item.name}</a>
                 )
             })}
-        <div className="overlay-content">
-            {/* <a href="/OceanSunset">Ocean Sunset</a> */}
-
-        </div>
+       
         
               
       </div>

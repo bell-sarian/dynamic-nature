@@ -3,17 +3,21 @@ import styles from "./GridItem.css";
 import { Link } from "react-router-dom";
 
 export default function GridItem(props)  {
+
+  const handleClick = (myLink) => () => {
+    window.location.href=myLink;
+  }
     
     return (
-      <div className="grid-item-container" style={{ backgroundImage: props.styles}} >
+      <Link className="grid-item-container" to={props.path} onClick={() => handleClick(props.path)} style={{ backgroundImage: props.styles}} >
 
 
-        <a href={props.path}>
+        <div className="link-text" href={props.path}>
             
             {props.name}
-        </a>
+        </div>
             
-      </div>
+      </Link>
     );
   
 }

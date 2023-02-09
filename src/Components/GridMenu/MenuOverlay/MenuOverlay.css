@@ -1,12 +1,5 @@
 .grid-menu-container {
-
-}
-
-.grid-menu-container .grid-menu {
-
-}
-
-.grid-menu-container .grid-menu .grid-nav-menu {
+    /* border: 1px solid purple; */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -14,7 +7,7 @@
     flex-shrink: 3;
 
 
-    width: 900vw;
-    height: 900vh;
+    /* width: 900vw; */
+    /* height: 900vh; */
 }
 

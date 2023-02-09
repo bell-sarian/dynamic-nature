@@ -8,12 +8,15 @@ import { color } from "@mui/system";
 export default function NavBar()  {
   const [menuOpen, setMenuOpen] = useState(false);
     return (
-      <div className="menu-bar-container" style={{color: menuOpen ? "#00000080" : "#ffffff80"}}>
+      <div 
+        className="menu-bar-container" 
+        // style={{color: menuOpen ? "#00000080" : "#ffffff80"}}
+        >
         <div className="menu-about">
             <div>BSW</div>
         </div>
         <div className="menu-web-name">DYNAMIC NATURE</div>
-        {/* <div className="menu-grid-button"> <img src={GridIcon} alt="Grid Icon" /></div> */}
+        
         <GridMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </div>
     );

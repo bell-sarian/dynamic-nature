@@ -16,7 +16,7 @@ export default function GridMenu({menuOpen, setMenuOpen})  {
                 setMenuOpen(!menuOpen);
             }} 
         > 
-            <img src={menuOpen ? GridOpenIcon : GridIcon} alt="Grid Icon" />
+            <img src={menuOpen ? GridOpenIcon : GridIcon} alt="Grid Icon" style={{color: "#fff"}}/>
         </div>
         <MenuOverlay menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </div>
