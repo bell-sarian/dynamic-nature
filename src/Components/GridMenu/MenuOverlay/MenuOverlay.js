@@ -26,19 +26,20 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
         backgroundColor: "#0000007f",
         opacity: 50,
         transform: "translateY(0%)",
-        transition: "all .5s ease-in-out",
+        transition: "all .9s ease-in-out",
         color: "red"
     }
 
     const stylesClosed = {
         visibility: "hidden",
+        opacity: 10,
         left: 0,
         top: 0,
         width: "100vw",
         height: "100vh",
         position: "absolute",
         transform: "translateY(-100%)",
-        transition: "all .5s ease-in-out",
+        transition: "all .9s ease-in-out",
     }
 
     const menuItems = ([
