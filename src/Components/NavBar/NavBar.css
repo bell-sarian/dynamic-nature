@@ -3,8 +3,9 @@
     flex-direction: row;
     justify-content: space-evenly;
     
-    width: 100%;
-    height: 100px;
+    /* width: 100%; */
+    /* height: 100px; */
+    background: transparent;
     /* background-color: #131313f3; */
     /* background: blur(5px);     */
     position: sticky;
@@ -12,7 +13,22 @@
     left: 0;
     padding-top: 2vh;
     margin-bottom: 100px;
-    z-index: 9999;
+    z-index: 999999999;
 
     color: #ffffffb9;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+
+    
+}
+
+.menu-about, .menu-web-name {
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
 }

@@ -3,11 +3,44 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ErrorPage from './error-page';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  BrowserRouter
+} from "react-router-dom";
+import OceanSunset from './Art/OceanSunset/OceanSunset';
+import NavBar from './Components/NavBar/NavBar';
+import Home from './Pages/Home/Home';
+import About from './Pages/About/About';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/OceanSunset",
+    element: <OceanSunset />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/About",
+    element: <About />,
+    errorElement: <ErrorPage />
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <NavBar />
+      <App />
+      {/* <OceanSunset />
+      <About /> */}
+    </BrowserRouter>
   </React.StrictMode>
 );
 
