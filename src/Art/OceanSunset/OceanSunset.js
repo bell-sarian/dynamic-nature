@@ -1,15 +1,19 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Styles from "./OceanSunset.css";
 import Block from "./Block/Block";
 import Sun from "./Sun/Sun";
 
+import { Keyframes } from "@emotion/serialize";
+
 export default function OceanSunset()  {
 
+  const [styles, setStyles] = useState(null);
+  
     const colors = [
-        [{"color": "#764F62", "width": "100vw", "height": "2vh"}],
-        [{"color": "#6E475A", "width": "100vw", "height": "13vh"}],
-        [{"color": "#6A4356", "width": "100vw", "height": "8vh"}],
-        [{"color": "#634456", "width": "100vw", "height": "10vh"}],
+        [{"color": "#764F62", "color2": "#b37894", "width": "100vw", "height": "2vh"}],
+        [{"color": "#6E475A", "color2": "#705160", "width": "100vw", "height": "13vh"}],
+        [{"color": "#6A4356", "color2": "#6A4390", "width": "100vw", "height": "8vh"}],
+        [{"color": "#634456", "color2": "#632456", "width": "100vw", "height": "10vh"}],
         [{"color": "#60445A", "width": "100vw", "height": "10vh"}],
         [{"color": "#54475B", "width": "100vw", "height": "4vh"}],
         [{"color": "#4D4D5F", "width": "100vw", "height": "7vh"}],
@@ -88,7 +92,7 @@ export default function OceanSunset()  {
               {items.map((subItems, subIndex) => {
 
                 return (
-                  <Block key={subIndex}  blockColor={subItems.color} blockWidth={subItems.width} blockHeight={subItems.height} blockHover={subItems.hoverColor}/>
+                  <Block key={index + "-" + subIndex} blockNumber={index} blockSubNumber={subIndex} blockColor={subItems.color} blockSecondColor={subItems.color2} blockWidth={subItems.width} blockHeight={subItems.height} blockHover={subItems.hoverColor}/>
                 )
               })}
             </div>
