@@ -1,8 +1,15 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState, useEffect  } from "react";
 import styles from "./Block.css";
 
 export default function Block(props)  {
   const [isHovering, setIsHovering] = useState(false);
+  const [ animateFlag, setAnimateFlag] = useState(false)
+  const [ duration, setDuration ] = useState(props.blockDuration)
+
+  useEffect(() => {    
+    setAnimateFlag(true) 
+  });
+
   const handleMouseEnter = () => {
     setIsHovering(true);
   };
@@ -10,6 +17,7 @@ export default function Block(props)  {
   const handleMouseLeave = () => {
     setIsHovering(false);
   };
+
 
   const ColorLuminance = (hex, lum) => {
 
@@ -27,7 +35,8 @@ export default function Block(props)  {
       c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
       rgb += ("00"+c).substr(c.length);
     }
-  
+    console.log("Lum Hex:" + hex + ", " + lum)
+    
     return rgb;
   }
 
@@ -39,9 +48,9 @@ export default function Block(props)  {
   let keyframes =
     `@-webkit-keyframes ${animationName} {
         0%   { background-color: ${props.blockColor}; }
-        25%  { background-color: ${ColorLuminance(props.blockColor, .25)} }
-        50%  { background-color: ${ColorLuminance(props.blockColor, .4)}}
-        75%  { background-color: ${ColorLuminance(props.blockColor, .55)} }
+        25%  { background-color: ${ColorLuminance(props.blockColor, .10)} }
+        50%  { background-color: ${ColorLuminance(props.blockColor, .20)}}
+        75%  { background-color: ${ColorLuminance(props.blockColor, .30)} }
         100% { background-color: ${props.blockColor}; }
         
     }`;
@@ -49,17 +58,19 @@ export default function Block(props)  {
     styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
 
   const styles = {
-    animationName: animationName,
-    // animationName: isHovering ? animationName: null,
-    backgroundColor: props.blockColor, 
-    opacity: isHovering ? .90 : 1,
+    // animationName: animationName,
+    animationName: animateFlag ? animationName : null,
+    background: props.blockColor,
+    backgroundColor: animationName,  
+    // opacity: isHovering ? .90 : 1,
     transition: "opacity .7s", 
     height: props.blockHeight, 
     width: props.blockWidth, 
     zIndex: 9, 
     display: "flex", 
     flexDirection: "row",
-    WebkitAnimation: `pulse ${Math.floor(Math.random() * (40 - 0) + 40)}s linear infinite`,
+    // WebkitAnimation: `pulse ${Math.floor(Math.random() * (2 - 1) + 2)}s linear infinite`,
+    WebkitAnimation: `pulse ${duration}s linear infinite`,
     // keyframesStyle
   }
 
@@ -76,7 +87,7 @@ export default function Block(props)  {
   
   return (
       <div 
-        className="block" 
+        className={"block-" + props.blockNumber + "-" + props.blockSubNumber}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={styles}
