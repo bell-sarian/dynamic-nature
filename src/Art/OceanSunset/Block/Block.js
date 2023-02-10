@@ -6,19 +6,28 @@ export default function Block(props)  {
   const [ animateFlag, setAnimateFlag] = useState(false)
   const [ duration, setDuration ] = useState(props.blockDuration)
 
+  // Upon component mounting, set off animation flag to true.
+  //    Prevents animation from starting before DOM is finished rendering
   useEffect(() => {    
     setAnimateFlag(true) 
   });
 
+  // Handle hover effect mouse enter
   const handleMouseEnter = () => {
     setIsHovering(true);
   };
 
+  // Handle hover effect mouse leave
   const handleMouseLeave = () => {
     setIsHovering(false);
   };
 
 
+  // Function: ColorLuminence
+  // Props: 
+  //    hex - hex color number
+  //    Luminence change
+  // Output: hex of color with lumocity increased by lum amount
   const ColorLuminance = (hex, lum) => {
 
     // validate hex string
@@ -35,16 +44,24 @@ export default function Block(props)  {
       c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
       rgb += ("00"+c).substr(c.length);
     }
-    console.log("Lum Hex:" + hex + ", " + lum)
     
+    // Returns RGB of hex number
     return rgb;
   }
 
+  // Get style sheet for document
   let styleSheet = document.styleSheets[0];
-
+  // Create animation variable to pulse.
+  // Each pulse is uniquely named based on the matricie: pulse-ROW-COL
   let animationName = `pulse-${props.blockNumber}-${props.blockSubNumber}`;
   console.log(animationName)
 
+  // Create keyframes variable with animation name
+  // Four gradient slots exist:
+  //    first - origional color
+  //    Second - OG Color + 10% lumocity increase 
+  //    Third - OG Color + 20% lumocity increase 
+  //    Fourth - OG Color + 30% lumocity increase 
   let keyframes =
     `@-webkit-keyframes ${animationName} {
         0%   { background-color: ${props.blockColor}; }
@@ -55,13 +72,13 @@ export default function Block(props)  {
         
     }`;
 
+    // Inject the new style rules into the stylesheet
     styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
 
+  // Define styles of block div for classname block-ROW-COL
   const styles = {
-    // animationName: animationName,
-    animationName: animateFlag ? animationName : null,
-    background: props.blockColor,
-    backgroundColor: animationName,  
+    animationName: animateFlag ? animationName : null, // If animation flag is TRUE, initiate animation
+    backgroundColor: props.blockColor, // OG color passed in from parent function
     // opacity: isHovering ? .90 : 1,
     transition: "opacity .7s", 
     height: props.blockHeight, 
@@ -69,21 +86,8 @@ export default function Block(props)  {
     zIndex: 9, 
     display: "flex", 
     flexDirection: "row",
-    // WebkitAnimation: `pulse ${Math.floor(Math.random() * (2 - 1) + 2)}s linear infinite`,
-    WebkitAnimation: `pulse ${duration}s linear infinite`,
-    // keyframesStyle
+    WebkitAnimation: `pulse ${duration}s linear infinite`, // define aniation through Webkit to pulse for DURATION seconds, linearly, infinately
   }
-
-  // const keyframesStyle = `
-  //     @-webkit-keyframes pulse {
-  //       0%   { background-color: #fecd6d; }
-  //       25%  { background-color: #ef7b88; }
-  //       50%  { background-color: #acdacf; }
-  //       75%  { background-color: #87c3db; }
-  //       100% { background-color: #fecd6d; }
-  //     }
-  //   `;
-    
   
   return (
       <div 

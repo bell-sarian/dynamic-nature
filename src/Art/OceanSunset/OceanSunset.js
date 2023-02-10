@@ -7,8 +7,14 @@ import { Keyframes } from "@emotion/serialize";
 
 export default function OceanSunset()  {
 
-  const [styles, setStyles] = useState(null);
-  
+    
+      // Matrix of color blocks including: 
+      //   color, 
+      //   duration of linear gradient animation
+      //   width of block
+      //   height of block 
+    
+    
     const colors = [
         [{"color": "#764F62", "duration": "12", "width": "100vw", "height": "2vh"}],
         [{"color": "#6E475A", "duration": "10", "width": "100vw", "height": "13vh"}],
@@ -83,12 +89,16 @@ export default function OceanSunset()  {
     
     return (
       <div className="ocean-sunset-container">
+
+        {/* Sun component */}
         <Sun />
         
+        {/* Outer loop to iterate through color matrix row-by-row */}
         {colors.map((items, index) => {
           
           return (
             <div key={index} className="row-container">
+              {/* Inner loop to iterate through color matrix column-by-column */}
               {items.map((subItems, subIndex) => {
 
                 return (
