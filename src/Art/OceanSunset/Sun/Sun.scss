@@ -1,12 +1,9 @@
 .sun {
-    z-index: 99999;
     position: absolute;
     display: flex;
-    left: 45.5%;
-    top: 30%;
 	width: 10vw;
 	height: 10vw;
-	background: radial-gradient(#FF3E5F, #FF5159);
+	/* background: radial-gradient(#FF3E5F, #FF5159); */
 	border-radius: 50%;
 	box-shadow: 
 		0 0 0 20px #FF3E5F80,
@@ -60,14 +57,12 @@
     
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .sun {
-        z-index: 99999;
+        z-index: 9;
         position: absolute;
         display: flex;
-        /* justify-content: center; */
-        left: 40%;
-        top: 40%;
+        /* top: 40%; */
         width: 25vw;
         height: 25vw;
         background: radial-gradient(#FF3E5F, #FF5159);
