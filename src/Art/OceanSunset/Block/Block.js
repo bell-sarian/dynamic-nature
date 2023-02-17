@@ -55,7 +55,6 @@ export default function Block(props)  {
   // Create animation variable to pulse.
   // Each pulse is uniquely named based on the matricie: pulse-ROW-COL
   let animationName = `pulse-${props.blockNumber}-${props.blockSubNumber}`;
-  console.log(animationName)
 
   // Create keyframes variable with animation name
   // Four gradient slots exist:
