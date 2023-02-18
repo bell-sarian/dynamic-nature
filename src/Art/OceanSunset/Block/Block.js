@@ -4,7 +4,7 @@ import styles from "./Block.scss";
 export default function Block(props)  {
   const [isHovering, setIsHovering] = useState(false);
   const [ animateFlag, setAnimateFlag] = useState(false)
-  const [ duration, setDuration ] = useState(props.blockSubNumber > 0 ? Math.floor(Math.random() * (8 - 2) + 2) : Math.floor(Math.random() * (20 - 15) + 15))
+  const [ duration, setDuration ] = useState(props.numSubItems > 1 ? Math.floor(Math.random() * (12 - 2) + 2) : Math.floor(Math.random() * (20 - 15) + 15))
   const [ blockZIndex, setBlockZIndex ] = useState(props.horizon == true ? 9 : 100);
 
   // Upon component mounting, set off animation flag to true.
