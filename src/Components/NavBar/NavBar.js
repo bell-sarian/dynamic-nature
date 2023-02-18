@@ -1,5 +1,5 @@
-import React, { Component, useState } from "react";
-import Styles from "./NavBar.css";
+import React, {  useState } from "react";
+import Styles from "./NavBar.scss";
 import GridIcon from "../../Assets/grid_icon.svg";
 import GridMenu from "../GridMenu/GridMenu";
 import { color } from "@mui/system";

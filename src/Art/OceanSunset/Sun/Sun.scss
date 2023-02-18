@@ -1,0 +1,287 @@
+
+
+.sun {
+    position: absolute;
+    display: flex;
+	width: 9vw;
+	height: 9vw;
+	z-index: 10;
+	transition: opacity .7s;
+	border-radius: 50%;
+
+}
+
+// Individual sun/moon phase colors
+
+.moon {
+	background: linear-gradient(#FFFFFF, #cccccc);
+	top: 20vh;
+
+	z-index: 10;  
+	box-shadow: 
+		0 0 0 20px #FFFFFF80,
+		0 0 0 40px #FFFFFF40,
+		0 0 0 60px #FFFFFF20,
+		0 0 0 80px #FFFFFF10,
+		0 0 0 100px #FFFFFF00,
+		0 0 40px 100px #FFFFFF10;
+	animation:
+		sunrise 2s infinite linear forwards,
+		moon-rays 2s 2s infinite linear;
+}
+
+
+.moonset {
+	background: linear-gradient(#FFFFFF, #cccccc);
+	top: 50vh;
+
+	box-shadow: 
+		0 0 0 20px #FFFFFF80,
+		0 0 0 40px #FFFFFF40,
+		0 0 0 60px #FFFFFF20,
+		0 0 0 80px #FFFFFF10,
+		0 0 0 100px #FFFFFF00,
+		0 0 40px 100px #FFFFFF10;
+	animation:
+		sunrise 2s infinite linear forwards,
+		moon-rays 2s 2s infinite linear;
+}
+
+
+
+.sunrise {
+	background: radial-gradient(#fff8dc, #FDDF5B);
+	top: -100;
+
+	box-shadow: 
+		0 0 0 20px #FDDF5B80,
+		0 0 0 40px #FDDF5B40,
+		0 0 0 60px #FDDF5B20,
+		0 0 0 80px #FDDF5B10,
+		0 0 0 100px #FDDF5B00,
+		0 0 40px 100px #FDDF5B10;
+	animation:
+		sunrise 2s infinite linear forwards,
+		sunrise-rays 2s 2s infinite linear;
+}
+
+@keyframes sunrise-rays {
+	0% {
+		box-shadow: 
+		0 0 0 0 #FDDF5B80,
+		0 0 0 20px #FDDF5B40,
+		0 0 0 40px #FDDF5B20,
+		0 0 0 60px #FDDF5B10,
+		0 0 0 80px #FDDF5B00,
+		0 0 40px 100px #DC890910;
+	}
+
+    50% {
+		box-shadow: 
+		0 0 0 10px #FDDF5B80,
+		0 0 0 30px #FDDF5B40,
+		0 0 0 50px #FDDF5B20,
+		0 0 0 70px #FDDF5B10,
+		0 0 0 90px #FDDF5B00,
+		0 0 40px 100px #DC890910;
+	}
+    
+	100% {
+		box-shadow: 
+		0 0 0 20px #FDDF5B80,
+		0 0 0 40px #FDDF5B40,
+		0 0 0 60px #FDDF5B20,
+		0 0 0 80px #FDDF5B10,
+		0 0 0 100px #FDDF5B00,
+		0 0 40px 100px #FDDF5B10;
+	}
+}
+
+.daysun {
+	background: radial-gradient(#fff8dc, #FDDF5B);
+	top: -5vh;
+	left: 35vw;
+
+	box-shadow: 
+	0 0 0 20px #FDDF5B80,
+	0 0 0 40px #FDDF5B40,
+	0 0 0 60px #FDDF5B20,
+	0 0 0 80px #FDDF5B10,
+	0 0 0 100px #FDDF5B00,
+	0 0 40px 100px #FDDF5B10;
+	animation:
+		sunrise 2s infinite linear forwards,
+		sunrise-rays 2s 2s infinite linear;
+}
+
+.midsunset {
+	background: radial-gradient(#F7B043, #DC8909);
+	top: 10vh;
+
+	box-shadow: 
+		0 0 0 20px #DC890980,
+		0 0 0 40px #DC890940,
+		0 0 0 60px #DC890920,
+		0 0 0 80px #DC890910,
+		0 0 0 100px #DC890900,
+		0 0 40px 100px #DC890910;
+	animation:
+		sunrise 2s infinite linear forwards,
+		midsunset-rays 2s 2s infinite linear;
+}
+
+@keyframes midsunset-rays {
+	0% {
+		box-shadow: 
+		0 0 0 0 #DC890980,
+		0 0 0 20px #DC890940,
+		0 0 0 40px #DC890920,
+		0 0 0 60px #DC890910,
+		0 0 0 80px #DC890900,
+		0 0 40px 100px #DC890910;
+	}
+
+    50% {
+		box-shadow: 
+		0 0 0 10px #DC890980,
+		0 0 0 30px #DC890940,
+		0 0 0 50px #DC890920,
+		0 0 0 70px #DC890910,
+		0 0 0 90px #DC890900,
+		0 0 40px 100px #DC890910;
+	}
+    
+	100% {
+		box-shadow: 
+		0 0 0 20px #DC890980,
+		0 0 0 40px #DC890940,
+		0 0 0 60px #DC890920,
+		0 0 0 80px #DC890910,
+		0 0 0 100px #DC890900,
+		0 0 40px 100px #DC890910;
+	}
+}
+
+.sunset {
+	background: radial-gradient(#FF3E5F, #FF5159);
+	top: 35vh;
+
+	box-shadow: 
+		0 0 0 20px #FF3E5F80,
+		0 0 0 40px #FF3E5F40,
+		0 0 0 60px #FF3E5F20,
+		0 0 0 80px #FF3E5F10,
+		0 0 0 100px #FF3E5F00,
+		0 0 40px 100px #FF3E5F10;
+	animation:
+		sunrise 2s infinite linear forwards,
+		rays 2s 2s infinite linear;
+}
+
+.moonrise {
+	background: linear-gradient(#FFFFFF, #cccccc);
+	top: 15vh;
+
+	box-shadow: 
+		0 0 0 20px #FFFFFF80,
+		0 0 0 40px #FFFFFF40,
+		0 0 0 60px #FFFFFF20,
+		0 0 0 80px #FFFFFF10,
+		0 0 0 100px #FFFFFF00,
+		0 0 40px 100px #FFFFFF10;
+	animation:
+		sunrise 2s infinite linear forwards,
+		moon-rays 2s 2s infinite linear;
+}
+
+
+
+@keyframes sunrise {
+	0% {
+		box-shadow: none;
+	}
+}
+
+@keyframes rays {
+	0% {
+		box-shadow: 
+		0 0 0 0 #FF3E5F80,
+		0 0 0 20px #FF3E5F40,
+		0 0 0 40px #FF3E5F20,
+		0 0 0 60px #FF3E5F10,
+		0 0 0 80px #FF3E5F00,
+		0 0 40px 100px #FF3E5F10;
+	}
+
+    50% {
+		box-shadow: 
+		0 0 0 10 #FF3E5F80,
+		0 0 0 30px #FF3E5F40,
+		0 0 0 50px #FF3E5F20,
+		0 0 0 70px #FF3E5F10,
+		0 0 0 90px #FF3E5F00,
+		0 0 40px 100px #FF3E5F10;
+	}
+    
+	100% {
+		box-shadow: 
+		0 0 0 20px #FF3E5F80,
+		0 0 0 40px #FF3E5F40,
+		0 0 0 60px #FF3E5F20,
+		0 0 0 80px #FF3E5F10,
+		0 0 0 100px #FF3E5F00,
+		0 0 40px 100px #FF3E5F10;
+	} 
+}
+
+@keyframes moon-rays {
+	0% {
+		box-shadow: 
+		0 0 0 0 #FFFFFF80,
+		0 0 0 20px #FFFFFF40,
+		0 0 0 40px #FFFFFF20,
+		0 0 0 60px #FFFFFF10,
+		0 0 0 80px #FFFFFF00,
+		0 0 40px 100px #FFFFFF10;
+	}
+
+    50% {
+		box-shadow: 
+		0 0 0 10 #FFFFFF80,
+		0 0 0 30px #FFFFFF40,
+		0 0 0 50px #FFFFFF20,
+		0 0 0 70px #FFFFFF10,
+		0 0 0 90px #FFFFFF00,
+		0 0 40px 100px #FFFFFF10;
+	}
+    
+	100% {
+		box-shadow: 
+		0 0 0 20px #FFFFFF80,
+		0 0 0 40px #FFFFFF40,
+		0 0 0 60px #FFFFFF20,
+		0 0 0 80px #FFFFFF10,
+		0 0 0 100px #FFFFFF00,
+		0 0 40px 100px #FFFFFF10;
+	}
+}
+
+
+@media only screen and (max-width: 700px) {
+    .sun {
+        z-index: 10;
+        position: absolute;
+        display: flex;
+        width: 25vw;
+        height: 25vw;
+        border-radius: 50%;
+
+    }
+
+	.daysun {
+		width: 10vw;
+        height: 10vw;
+		top: 5%;
+		left: 20%;
+	}
+  }

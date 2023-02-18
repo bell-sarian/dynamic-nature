@@ -1,10 +1,11 @@
-import React, { Component, useState, useEffect  } from "react";
-import styles from "./Block.css";
+import React, {  useState, useEffect  } from "react";
+import styles from "./Block.scss";
 
 export default function Block(props)  {
   const [isHovering, setIsHovering] = useState(false);
   const [ animateFlag, setAnimateFlag] = useState(false)
-  const [ duration, setDuration ] = useState(props.blockDuration)
+  const [ duration, setDuration ] = useState(props.numSubItems > 1 ? Math.floor(Math.random() * (12 - 2) + 2) : Math.floor(Math.random() * (20 - 15) + 15))
+  const [ blockZIndex, setBlockZIndex ] = useState(props.horizon == true ? 9 : 100);
 
   // Upon component mounting, set off animation flag to true.
   //    Prevents animation from starting before DOM is finished rendering
@@ -54,7 +55,6 @@ export default function Block(props)  {
   // Create animation variable to pulse.
   // Each pulse is uniquely named based on the matricie: pulse-ROW-COL
   let animationName = `pulse-${props.blockNumber}-${props.blockSubNumber}`;
-  console.log(animationName)
 
   // Create keyframes variable with animation name
   // Four gradient slots exist:
@@ -83,7 +83,7 @@ export default function Block(props)  {
     transition: "opacity .7s", 
     height: props.blockHeight, 
     width: props.blockWidth, 
-    zIndex: 9, 
+    zIndex: blockZIndex, 
     display: "flex", 
     flexDirection: "row",
     WebkitAnimation: `pulse ${duration}s linear infinite`, // define aniation through Webkit to pulse for DURATION seconds, linearly, infinately
