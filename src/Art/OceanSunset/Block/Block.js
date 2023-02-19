@@ -4,7 +4,7 @@ import styles from "./Block.scss";
 export default function Block(props)  {
   const [isHovering, setIsHovering] = useState(false);
   const [ animateFlag, setAnimateFlag] = useState(false)
-  const [ duration, setDuration ] = useState(props.numSubItems > 1 ? Math.floor(Math.random() * (12 - 2) + 2) : Math.floor(Math.random() * (20 - 15) + 15))
+  const [ duration, setDuration ] = useState(props.numSubItems > 1 ? Math.floor(Math.random() * (15 - 2) + 2) : Math.floor(Math.random() * (20 - 15) + 15))
   const [ blockZIndex, setBlockZIndex ] = useState(props.horizon == true ? 9 : 100);
 
   // Upon component mounting, set off animation flag to true.
@@ -62,7 +62,16 @@ export default function Block(props)  {
   //    Second - OG Color + 10% lumocity increase 
   //    Third - OG Color + 20% lumocity increase 
   //    Fourth - OG Color + 30% lumocity increase 
-  let keyframes =
+  let keyframesHorizon =
+    `@-webkit-keyframes ${animationName} {
+        0%   { background-color: ${props.blockColor}; }
+        25%  { background-color: ${ColorLuminance(props.blockColor, .05)} }
+        50%  { background-color: ${ColorLuminance(props.blockColor, .10)}}
+        75%  { background-color: ${ColorLuminance(props.blockColor, .15)} }
+        100% { background-color: ${props.blockColor}; }
+        
+    }`;
+    let keyframesOcean =
     `@-webkit-keyframes ${animationName} {
         0%   { background-color: ${props.blockColor}; }
         25%  { background-color: ${ColorLuminance(props.blockColor, .10)} }
@@ -71,6 +80,8 @@ export default function Block(props)  {
         100% { background-color: ${props.blockColor}; }
         
     }`;
+     
+    let keyframes = props.horizon ? keyframesHorizon : keyframesOcean;
 
     // Inject the new style rules into the stylesheet
     styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
