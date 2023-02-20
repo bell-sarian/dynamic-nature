@@ -90,7 +90,7 @@ export default function Block(props)  {
   const styles = {
     animationName: animateFlag ? animationName : null, // If animation flag is TRUE, initiate animation
     backgroundColor: props.blockColor, // OG color passed in from parent function
-    // opacity: isHovering ? .90 : 1,
+    opacity: isHovering ? .80 : 1,
     transition: "opacity .7s", 
     height: props.blockHeight, 
     width: props.blockWidth, 
