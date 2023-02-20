@@ -709,14 +709,14 @@ export default function OceanSunset()  {
     return (
       <div className="ocean-sunset-container">
 
-        {/* {starBool ? <Stars /> : null} */}
-        <Stars />
+        {starBool ? <Stars /> : null}
+        {/* <Stars /> */}
 
         {/* Sun component */}
-        <Sun sunStyle={"moonrise"}/>
+        <Sun sunStyle={sunStyle}/>
         
         {/* Outer loop to iterate through color matrix row-by-row */}
-        {moonrise.map((items, index) => {
+        {timeOfDay.map((items, index) => {
           
           return (
             <div key={index} className="row-container">
