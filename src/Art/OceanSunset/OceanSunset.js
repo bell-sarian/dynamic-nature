@@ -5,7 +5,6 @@ import Sun from "./Sun/Sun";
 import Stars from './Stars/Stars';
 
 export default function OceanSunset()  {
-
    
     // Matrix of color blocks including: 
     //   color, 
@@ -671,7 +670,7 @@ export default function OceanSunset()  {
     let starBool = false;
 
     // The if/else statements
-    if (time <= 4) {
+    if (time <= 4 || time > 19) {
       timeOfDay = moon;
       sunStyle = "moon";
       starBool= true;
@@ -695,7 +694,7 @@ export default function OceanSunset()  {
       timeOfDay = sunset;
       sunStyle = "sunset";
       starBool= false;
-    } else if (time >= 18 && time < 24){
+    } else if (time >= 18 && time <= 19){
       timeOfDay = moonrise;
       sunStyle = "moonrise";
       starBool= true;
@@ -730,6 +729,7 @@ export default function OceanSunset()  {
             </div>
           )
         })}
+        {/* <button onClick={openFullscreen()} >Full Screen</button> */}
               
       </div>
     );
