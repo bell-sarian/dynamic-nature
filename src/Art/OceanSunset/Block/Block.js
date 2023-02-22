@@ -1,5 +1,5 @@
 import React, {  useState, useEffect  } from "react";
-import styles from "./Block.scss";
+import "./Block.scss";
 
 export default function Block(props)  {
   const [isHovering, setIsHovering] = useState(false);
@@ -80,18 +80,20 @@ export default function Block(props)  {
         100% { background-color: ${props.blockColor}; }
         
     }`;
-     
+
     let keyframes = props.horizon ? keyframesHorizon : keyframesOcean;
 
     // Inject the new style rules into the stylesheet
     styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+
+
 
   // Define styles of block div for classname block-ROW-COL
   const styles = {
     animationName: animateFlag ? animationName : null, // If animation flag is TRUE, initiate animation
     backgroundColor: props.blockColor, // OG color passed in from parent function
     opacity: isHovering ? .80 : 1,
-    transition: "opacity .7s", 
+    transition: "width 4s ease-in-out", 
     height: props.blockHeight, 
     width: props.blockWidth, 
     zIndex: blockZIndex, 
@@ -102,7 +104,7 @@ export default function Block(props)  {
   
   return (
       <div 
-        className={"block-" + props.blockNumber + "-" + props.blockSubNumber}
+        className={"block-container block-" + props.blockNumber + "-" + props.blockSubNumber}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={styles}
