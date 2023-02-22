@@ -30,7 +30,7 @@ export default function Stars() {
 
     for (let i = 0 ; i < 70; i++) {
         var xposition = Math.floor(Math.random() * window.innerWidth);
-        var yposition = Math.floor(Math.random() * window.innerHeight);
+        var yposition = Math.floor(Math.random() * (window.innerHeight / 2));
         var star_type = Math.floor((Math.random() * 3) + 1);
         var position = {
             "x" : window.innerWidth * xposition,
@@ -47,10 +47,8 @@ export default function Stars() {
                 var yposition = Math.floor(Math.random() * window.innerHeight);
                 var star_type = Math.floor((Math.random() * 3) + 1);
 
-                console.log(xposition + " + " + yposition)
-                console.log("star_type" + star_type)
                 return (
-                <div className={"star star-type" + item.type} style={{ top : item.yAxis , left : item.xAxis}} ></div>
+                <div className={"star star-type" + item.type} style={{ top : item.yAxis , left : item.xAxis}} key={index} ></div>
                 )
             })}
         </div>

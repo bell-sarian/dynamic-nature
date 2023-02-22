@@ -33,7 +33,7 @@
 
 .moonset {
 	background: linear-gradient(#FFFFFF, #cccccc);
-	top: 45vh;
+	top: 40vh;
 
 	box-shadow: 
 		0 0 0 10px #FFFFFF80,
@@ -52,8 +52,8 @@
 .sunrise {
 	background: radial-gradient(#fff8dc, #FDDF5B);
 	top: 10%;
-	width: 4vw;
-	height: 4vw;
+	width: 6vw;
+	height: 6vw;
 
 	box-shadow: 
 		0 0 0 10px #FDDF5B80,
@@ -72,8 +72,8 @@
 .daysun {
 	background: radial-gradient(#fff8dc, #FDDF5B);
 	top: 5vh;
-	width: 6vw;
-	height: 6vw;
+	width: 8vw;
+	height: 8vw;
 
 	box-shadow: 
 	0 0 0 20px #FDDF5B80,
@@ -219,7 +219,7 @@
 		0 0 0 20px #FDDF5B20,
 		0 0 0 30px #FDDF5B10,
 		0 0 0 40px #FDDF5B00,
-		0 0 40px 50px #DC890910;
+		0 0 40px 100px #DC890910;
 	}
 
     50% {
@@ -229,7 +229,7 @@
 		0 0 0 20px #FDDF5B20,
 		0 0 0 25px #FDDF5B10,
 		0 0 0 30px #FDDF5B00,
-		0 0 40px 40px #DC890910;
+		0 0 40px 100px #DC890910;
 	}
     
 	100% {
@@ -239,7 +239,7 @@
 		0 0 0 30px #FDDF5B20,
 		0 0 0 40px #FDDF5B10,
 		0 0 0 50px #FDDF5B00,
-		0 0 40px 60px #FDDF5B10;
+		0 0 40px 100px #FDDF5B10;
 	}
 }
 

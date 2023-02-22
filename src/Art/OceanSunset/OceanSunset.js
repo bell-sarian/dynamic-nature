@@ -1,11 +1,40 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState, useEffect } from "react";
 import Styles from "./OceanSunset.css";
 import Block from "./Block/Block";
 import Sun from "./Sun/Sun";
 import Stars from './Stars/Stars';
+import InfoButton from "../../Components/InfoButton/InfoButton";
+import Modal from '../../Components/Modal/Modal';
+import { Dropdown } from "../../Components/Dropdown/Dropdown";
 
 export default function OceanSunset()  {
-   
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [timeOfDay, setTimeOfDay] = useState("");
+  const [timeOfDayArray, setTimeOfDayArray] = useState([]);
+  const [sunStyle, setSunStyle] = useState("");
+  const [starBool, setStarBool] = useState(null);
+  const [time, setTime] = useState(new Date().getHours());
+  const [TODLable, setTODLable] = useState("");
+
+  const [animate, setAnimate] = useState(false)
+  let content = [
+    "Ocean Sun is an impressionistic art series consisting of five animated images of the sun or moon over the ocean at different times of the day.", 
+    "The images depict different times of day and change real time to match the users's time of day."
+  ]
+  const options = [
+
+    { label: `Current Time: ${TODLable}`, value: 'currenttime'},
+    { label: 'Moon', value: 'moon'},
+    { label: 'Moonset', value: 'moonset' },
+    { label: 'Sunrise', value: 'sunrise' },
+    { label: 'Daytime Sun', value: 'daysun' },
+    { label: 'Pre Sunset', value: 'midsunset' },
+    { label: 'Sunset', value: 'sunset' },
+    { label: 'Moonrise', value: 'moonrise' },
+ 
+  ];
+
     // Matrix of color blocks including: 
     //   color, 
     //   duration of linear gradient animation
@@ -138,10 +167,9 @@ export default function OceanSunset()  {
       ],
       
     ]
-
     // DONE
     const moonset = [
-      [{"color": "#1A222F", "duration": "12", "width": "100vw", "height": "2vh", "horizon": true }],
+      [{"color": "#1A222F", "duration": "12", "width": "100vw", "height": "9vh", "horizon": true }],
       [{"color": "#1E2633", "duration": "10", "width": "100vw", "height": "8vh", "horizon": true }],
       [{"color": "#1F2935", "duration": "15", "width": "100vw", "height": "7vh", "horizon": true }],
       [{"color": "#232C3B", "duration": "20", "width": "100vw", "height": "8vh", "horizon": true }],
@@ -149,7 +177,7 @@ export default function OceanSunset()  {
       [{"color": "#27333F", "duration": "19", "width": "100vw", "height": "8vh", "horizon": true }],
       [{"color": "#2C363F", "duration": "19", "width": "100vw", "height": "9vh", "horizon": true }],
       [{"color": "#2C3740", "duration": "14", "width": "100vw", "height": "10vh", "horizon": true }],
-      [{"color": "#313640", "duration": "17", "width": "100vw", "height": "8vh", "horizon": true }],
+      [{"color": "#313640", "duration": "17", "width": "100vw", "height": "1vh", "horizon": true }],
       [{"color": "#1F222C", "duration": "17", "width": "100vw", "height": "1vh", "horizon": false }],
       [{"color": "#242B35", "duration": "5", "width": "25vw", "height": "3vh", "horizon": false },
         {"color": "#252934", "duration": "4", "width": "35vw", "height": "3vh", "horizon": false },
@@ -285,7 +313,6 @@ export default function OceanSunset()  {
       ],
 
     ]
-
     // DONE
     const sunrise = [
       [{"color": "#849FBD", "duration": "12", "width": "100vw", "height": "2vh", "horizon": true }],
@@ -362,7 +389,6 @@ export default function OceanSunset()  {
 
       
     ]
-
     // DONE
     const daysun = [
       [{"color": "#89B5DC", "duration": "12", "width": "100vw", "height": "2vh", "horizon": true }],
@@ -440,7 +466,6 @@ export default function OceanSunset()  {
       ],
       
     ]
-
     // DONE
     const midsunset = [
         [{"color": "#386F83", "duration": "12", "width": "100vw", "height": "2vh", "horizon": true }],
@@ -518,7 +543,6 @@ export default function OceanSunset()  {
         ],
         
     ]
-
     // DONE
     const sunset = [
       [{"color": "#764F62", "duration": "12", "width": "100vw", "height": "2vh", "horizon": true }],
@@ -590,7 +614,6 @@ export default function OceanSunset()  {
       ],
       
     ]
-
     // 
     const moonrise = [
       [{"color": "#897F73", "duration": "12", "width": "100vw", "height": "2vh", "horizon": true }],
@@ -664,48 +687,100 @@ export default function OceanSunset()  {
     ]
 
 
-    const time = new Date().getHours();
-    let timeOfDay = [];
-    let sunStyle = "";
-    let starBool = false;
 
-    // The if/else statements
-    if (time <= 4 || time > 19) {
-      timeOfDay = moon;
-      sunStyle = "moon";
-      starBool= true;
-    } else if (time >= 4 && time < 5) {
-      timeOfDay = moonset;
-      sunStyle = "moonset";
-      starBool= true;
-    } else if (time >= 6 && time < 12){
-      timeOfDay = sunrise;
-      sunStyle = "sunrise";
-      starBool= false;
-    } else if (time >= 12 && time < 16){
-      timeOfDay = daysun;
-      sunStyle = "daysun";
-      starBool= false;
-    } else if (time >= 16 && time < 17){
-      timeOfDay = midsunset;
-      sunStyle = "midsunset";
-      starBool= false;
-    } else if (time >= 17 && time < 18){
-      timeOfDay = sunset;
-      sunStyle = "sunset";
-      starBool= false;
-    } else if (time >= 18 && time <= 19){
-      timeOfDay = moonrise;
-      sunStyle = "moonrise";
-      starBool= true;
-    } else {
-      timeOfDay = moon;
-      sunStyle = "moon";
-      starBool= true;
+    const setCurrentTimeOfDay = () => {
+      if (time <= 4 || time > 19 ) {
+        setTimeOfDayArray(moon);
+        setSunStyle("moon");
+        setStarBool(true);
+        setTODLable("Moon")
+      } else if (time >= 4 && time < 5)  {
+        setTimeOfDayArray(moonset);
+        setSunStyle("moonset");
+        setStarBool(true);
+        setTODLable("Moonset")
+      } else if (time >= 6 && time < 8){
+        setTimeOfDayArray(sunrise);
+        setSunStyle("sunrise");
+        setStarBool(false);
+        setTODLable("Sunrise")
+      } else if (time >= 8 && time < 16){
+        setTimeOfDayArray(daysun);
+        setSunStyle("daysun");
+        setStarBool(false);
+        setTODLable("Daytime Sun")
+      } else if (time >= 16 && time < 17){
+        setTimeOfDayArray(midsunset);
+        setSunStyle("midsunset");
+        setStarBool(false);
+        setTODLable("Pre Sunset")
+      } else if (time >= 17 && time < 18){
+        setTimeOfDayArray(sunset);
+        setSunStyle("sunset");
+        setStarBool(false);
+        setTODLable("Sunset")
+      } else if (time >= 18 && time <= 19){
+        setTimeOfDayArray(moonrise);
+        setSunStyle("moonrise");
+        setStarBool(true);
+        setTODLable("Moonrise")
+      } else {
+        setTimeOfDayArray(moon);
+        setSunStyle("moon");
+        setStarBool(true);
+        setTODLable("Moon")
+      }
     }
 
+    const handleTimeOfDayChange = (event) => {
+      setTimeOfDay(event.target.value)
+      console.log("TOD " + event.target.value)
+
+      if (event.target.value === "currenttime"){
+        // The if/else statements
+        setCurrentTimeOfDay();
+      }
+      else if (event.target.value === "moon") {
+        setTimeOfDayArray(moon);
+        setSunStyle("moon");
+        setStarBool(true);
+      } else if (event.target.value === "moonset") {
+        setTimeOfDayArray(moonset);
+        setSunStyle("moonset");
+        setStarBool(true);
+      } else if (event.target.value === "sunrise"){
+        setTimeOfDayArray(sunrise);
+        setSunStyle("sunrise");
+        setStarBool(false);
+      } else if (event.target.value === "daysun"){
+        setTimeOfDayArray(daysun);
+        setSunStyle("daysun");
+        setStarBool(false);
+      } else if (event.target.value === "midsunset"){
+        setTimeOfDayArray(midsunset);
+        setSunStyle("midsunset");
+        setStarBool(false);
+      } else if (event.target.value === "sunset"){
+        setTimeOfDayArray(sunset);
+        setSunStyle("sunset");
+        setStarBool(false);
+      } else if (event.target.value === "moonrise"){
+        setTimeOfDayArray(moonrise);
+        setSunStyle("moonrise");
+        setStarBool(true);
+      } 
+    }
+
+    useEffect(() => {
+      
+      setCurrentTimeOfDay()
+    
+    }, [time])
+    
     
     return (
+      <div>
+        
       <div className="ocean-sunset-container">
 
         {starBool ? <Stars /> : null}
@@ -714,8 +789,9 @@ export default function OceanSunset()  {
         {/* Sun component */}
         <Sun sunStyle={sunStyle}/>
         
+        
         {/* Outer loop to iterate through color matrix row-by-row */}
-        {timeOfDay.map((items, index) => {
+        {timeOfDayArray.map((items, index) => {
           
           return (
             <div key={index} className="row-container">
@@ -723,14 +799,26 @@ export default function OceanSunset()  {
               {items.map((subItems, subIndex) => {
 
                 return (
-                  <Block  key={index + "-" + subIndex} blockNumber={index} blockSubNumber={subIndex} blockColor={subItems.color} blockSecondColor={subItems.color2} blockWidth={subItems.width} blockHeight={subItems.height} blockDuration={subItems.duration} horizon={subItems.horizon} numSubItems={items.length} />
+                  <Block  key={items.color + "-" + subIndex} blockNumber={index} blockSubNumber={subIndex} blockColor={subItems.color} blockSecondColor={subItems.color2} blockWidth={subItems.width} blockHeight={subItems.height} blockDuration={subItems.duration} horizon={subItems.horizon} numSubItems={items.length} />
                 )
               })}
             </div>
           )
         })}
         {/* <button onClick={openFullscreen()} >Full Screen</button> */}
-              
+       
+      </div>
+      <div className="time-of-day-select-container">
+        <Dropdown items={options} onChange={handleTimeOfDayChange} />
+      </div>
+        <div onClick={() => setModalOpen(true)} className="info-button-container">
+          <InfoButton />
+        </div>
+
+        <Modal setModalOpen={setModalOpen} content={content} modalOpen={modalOpen} />
+        
+        
+        
       </div>
     );
   
