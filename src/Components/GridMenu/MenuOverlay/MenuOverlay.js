@@ -31,6 +31,9 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
     }
 
     const stylesClosed = {
+        position: "absolute",
+        top: 0,
+        left: 0,
         visibility: "hidden",
         opacity: 10,
         left: 0,
@@ -66,7 +69,7 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
     
     return (
         <div
-            className="grid-menu-container"
+            className="menu-overlay-container"
             style={menuOpen ? stylesOpen : stylesClosed}
             onClick={() => setMenuOpen(false)} // close menu on select outside of designated buttons
         >
