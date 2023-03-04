@@ -12,7 +12,7 @@ import {
 
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
-import OceanSunset from './Art/OceanSunset/OceanSunset';
+import Collection1 from './Art/Collection1/Collection1';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
        <Routes>
           <Route index element={<Home />} />
           <Route path="About" element={<About />} />
-          <Route path="OceanSunset" element={<OceanSunset />} />
+          <Route path="Collection1" element={<Collection1 />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
@@ -47,7 +47,7 @@ function Layout() {
             <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/OceanSunset">Ocean Sunset</Link>
+            <Link to="/Collection1">Collection I</Link>
           </li>
           <li>
             <Link to="/nothing-here">Nothing Here</Link>

@@ -1,13 +1,10 @@
-.grid-menu-container {
-    /* border: 1px solid purple; */
+.menu-overlay-container {
+   display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-shrink: 3;
 
-
-    /* width: 900vw; */
-    /* height: 900vh; */
 }
 

@@ -1,15 +1,32 @@
+@font-face {
+  font-family: 'Sequel Sans Book Disp';
+  src: url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('embedded-opentype'), /* Internet Explorer */
+       url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('woff2'),             /* Super Modern Browsers */
+       url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('woff'),              /* Pretty Modern Browsers */
+       url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('truetype'),          /* Safari, Android, iOS */
+       url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('svg');               /* Legacy iOS */
+}
+
 body {
   background-color: rgb(21, 21, 21);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Sequel Sans Book Disp', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+  // font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+::selection {
+  background: #e1c5977d; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #e1c5977d; /* Gecko Browsers */
 }

@@ -6,7 +6,7 @@ import {
     RouterProvider,
   } from "react-router-dom";
 
-import OceanSunset from "../../../Art/OceanSunset/OceanSunset";
+import Collection1 from "../../../Art/Collection1/Collection1";
 import App from "../../../App";
 import About from "../../../Pages/About/About";
 import Home from "../../../Pages/Home/Home";
@@ -31,6 +31,9 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
     }
 
     const stylesClosed = {
+        position: "absolute",
+        top: 0,
+        left: 0,
         visibility: "hidden",
         opacity: 10,
         left: 0,
@@ -50,10 +53,10 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
             styles: "radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(120,120,120,1) 100%)"
         },
         {  
-            name: "OCEAN SUNSET",
-            path: "/OceanSunset",
-            element: <OceanSunset />,
-            styles: "radial-gradient(circle, rgba(255,81,89,1) 0%, rgba(210,114,123,1) 30%, rgba(110,125,142,1) 99%)"
+            name: "COLLECTION I",
+            path: "/Collection1",
+            element: <Collection1 />,
+            styles: "radial-gradient(circle, rgba(255,81,89,1) 0%, rgba(210,114,123,1) 30%, rgba(110,125,142,1) 100%)"
         },
         {
             name: "ABOUT",
@@ -66,7 +69,7 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
     
     return (
         <div
-            className="grid-menu-container"
+            className="menu-overlay-container"
             style={menuOpen ? stylesOpen : stylesClosed}
             onClick={() => setMenuOpen(false)} // close menu on select outside of designated buttons
         >
