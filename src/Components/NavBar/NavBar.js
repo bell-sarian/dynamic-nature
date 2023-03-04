@@ -12,13 +12,12 @@ export default function NavBar()  {
     return (
       <div 
         className="menu-bar-container" 
-        // style={{color: menuOpen ? "#00000080" : "#ffffff80"}}
         >
         <div className="menu-about">
-            <div>Software & UX Engineer | Bell Sarian Wong</div>
+            <div>Bell'Aria S.W.</div>
         </div>
         <div className="menu-web-name">
-          <Link to="/Home" className="menu-web-name-link" >DYNAMIC NATURE</Link>
+          <Link to="/" className="menu-web-name-link" >DYNAMIC NATURE</Link>
         </div>
         
 

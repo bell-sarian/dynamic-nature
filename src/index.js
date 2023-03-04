@@ -9,20 +9,20 @@ import {
   RouterProvider,
   BrowserRouter
 } from "react-router-dom";
-import OceanSunset from './Art/OceanSunset/OceanSunset';
+import Collection1 from './Art/Collection1/Collection1';
 import NavBar from './Components/NavBar/NavBar';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App />,
+    path: "/Home",
+    element: <Home />,
     errorElement: <ErrorPage />
   },
   {
-    path: "/OceanSunset",
-    element: <OceanSunset />,
+    path: "/Collection1",
+    element: <Collection1 />,
     errorElement: <ErrorPage />
   },
   {

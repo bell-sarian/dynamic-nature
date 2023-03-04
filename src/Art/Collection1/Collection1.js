@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from "react";
-import Styles from "./OceanSunset.css";
+import Styles from "./Collection1.css";
 import Block from "./Block/Block";
 import Sun from "./Sun/Sun";
 import Stars from './Stars/Stars';
@@ -7,7 +7,7 @@ import InfoButton from "../../Components/InfoButton/InfoButton";
 import Modal from '../../Components/Modal/Modal';
 import { Dropdown } from "../../Components/Dropdown/Dropdown";
 
-export default function OceanSunset()  {
+export default function Collection1()  {
 
   const [modalOpen, setModalOpen] = useState(false);
   const [timeOfDay, setTimeOfDay] = useState("");

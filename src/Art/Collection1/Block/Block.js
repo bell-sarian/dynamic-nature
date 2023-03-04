@@ -93,7 +93,7 @@ export default function Block(props)  {
     animationName: animateFlag ? animationName : null, // If animation flag is TRUE, initiate animation
     backgroundColor: props.blockColor, // OG color passed in from parent function
     opacity: isHovering ? .80 : 1,
-    transition: "width 2s ease-in-out", 
+    transition: "all 2s ease-in-out", 
     height: props.blockHeight, 
     width: props.blockWidth, 
     zIndex: blockZIndex, 
