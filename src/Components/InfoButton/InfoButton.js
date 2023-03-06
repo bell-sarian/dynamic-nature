@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import styles from './Sun.css';
+// import styles from './Sun.scss';
 import InfoIcon from '@mui/icons-material/Info';
 
 export default function InfoButton(props)  {

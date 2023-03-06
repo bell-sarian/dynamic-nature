@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./GridMenu.css";
+import Styles from "./GridMenu.scss";
 import GridIcon from "../../Assets/grid_icon.svg";
 import GridOpenIcon from "../../Assets/grid_open_icon.svg";
 import MenuOverlay from "./MenuOverlay/MenuOverlay";

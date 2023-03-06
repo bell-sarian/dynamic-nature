@@ -1,5 +1,5 @@
 import React, {  useState } from "react";
-import Styles from "./NavBar.css";
+import Styles from "./NavBar.scss";
 import GridIcon from "../../Assets/grid_icon.svg";
 import BWGF3 from "../../Assets/BW-GF3.svg";
 import GridMenu from "../GridMenu/GridMenu";

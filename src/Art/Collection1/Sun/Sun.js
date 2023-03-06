@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from './Sun.css';
+import styles from './Sun.scss';
 
 export default function Sun(props)  {
   const [isHovering, setIsHovering] = useState(false);
