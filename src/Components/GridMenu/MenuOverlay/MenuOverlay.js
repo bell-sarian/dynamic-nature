@@ -1,6 +1,6 @@
 
 import React, { Component, useState } from "react";
-import Styles from "./MenuOverlay.scss";
+import Styles from "./MenuOverlay.css";
 import {
     createBrowserRouter,
     RouterProvider,

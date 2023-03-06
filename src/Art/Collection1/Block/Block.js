@@ -1,5 +1,5 @@
 import React, {  useState, useEffect  } from "react";
-import "./Block.scss";
+import "./Block.css";
 
 export default function Block(props)  {
   const [isHovering, setIsHovering] = useState(false);
