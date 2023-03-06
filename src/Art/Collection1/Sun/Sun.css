@@ -11,7 +11,7 @@
 
 }
 
-// Individual sun/moon phase colors
+/* Individual sun/moon phase colors */
 
 .moon {
 	background: linear-gradient(#FFFFFF, #cccccc);
@@ -25,9 +25,7 @@
 		0 0 0 40px #FFFFFF10,
 		0 0 0 50px #FFFFFF00,
 		0 0 40px 80px #FFFFFF10;
-	// animation:
-	// 	sunrise 2s infinite linear forwards,
-	// 	moon-rays 2s 2s infinite linear;
+
 }
 
 
@@ -42,9 +40,7 @@
 		0 0 0 40px #FFFFFF10,
 		0 0 0 50px #FFFFFF00,
 		0 0 40px 80px #FFFFFF10;
-	// animation:
-	// 	sunrise 2s infinite linear forwards,
-	// 	moon-rays 2s 2s infinite linear;
+
 }
 
 
@@ -134,9 +130,7 @@
 		0 0 0 40px #FFFFFF10,
 		0 0 0 50px #FFFFFF00,
 		0 0 40px 80px #FFFFFF10;
-// 	animation:
-// 		sunrise 2s infinite linear forwards,
-// 		moon-rays 2s 2s infinite linear;
+
 }
 
 

@@ -1,9 +1,4 @@
 .block-container {
-    // animation-name: color_change;
-	// animation-duration: 1s;
-	// animation-iteration-count: infinite;
-	// animation-direction: alternate;
-	// transition: all .9s ease-in-out;
 	animation: fadeIn 5s;
 	-webkit-animation: fadeIn 5s;
 	-moz-animation: fadeIn 5s;
