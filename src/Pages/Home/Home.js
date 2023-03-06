@@ -29,7 +29,7 @@ export default function Home() {
       {/* Section 2 */}
       <div className="home-content-container2">
         <div>
-          <p>Section 2</p>
+          {/* <p>Section 2</p> */}
         </div>
       </div>
     </div>
