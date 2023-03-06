@@ -1,4 +1,7 @@
 .grid-menu-container {
+    // position: absolute;
+    // top: 0px;
+    // left: 0px;
     z-index: 99999;
     display: flex;
     justify-content: center;
