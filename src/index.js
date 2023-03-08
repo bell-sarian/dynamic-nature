@@ -13,6 +13,7 @@ import Collection1 from './Art/Collection1/Collection1';
 import NavBar from './Components/NavBar/NavBar';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
+import Work from './Pages/Work/Work';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
     element: <About />,
     errorElement: <ErrorPage />
   },
+  {
+    path: "/Work",
+    element: <Work />,
+    errorElement: <ErrorPage />
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -38,8 +44,6 @@ root.render(
     <BrowserRouter>
       <NavBar />
       <App />
-      {/* <OceanSunset />
-      <About /> */}
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -12,6 +12,7 @@ import {
 
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
+import Work from "./Pages/Work/Work";
 import Collection1 from './Art/Collection1/Collection1';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="About" element={<About />} />
           <Route path="Collection1" element={<Collection1 />} />
+          <Route path="Work" element={<Work />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
@@ -42,6 +44,9 @@ function Layout() {
         <ul>
           <li>
             <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/work">Work</Link>
           </li>
           <li>
             <Link to="/about">About</Link>
