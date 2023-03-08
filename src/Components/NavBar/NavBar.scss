@@ -61,10 +61,33 @@
 }
 
 .nav-menu-grid-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     position: absolute;
     top: 3vh;
     right: 3vw;
 
     // float: right;
     // padding-top: 5vh;
+}
+
+.menu-web-link {
+    margin-right: 10%;
+    font-size: .4cm;
+
+    color: #E1C597;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    background: transparent;
+    font-style: normal;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: .1cm;
 }

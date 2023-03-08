@@ -26,7 +26,20 @@ export default function NavBar()  {
         
 
       <div className="nav-menu-grid-button">
-        <GridMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        {/* <GridMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
+        <Link to="/work" className="menu-web-link" >
+          <div>Work </div>
+        </Link>
+        <Link to="/about" className="menu-web-link" >
+          <div>About </div>
+        </Link>
+        <Link to="/services" className="menu-web-link" >
+          <div>Services </div>
+        </Link>
+        <Link to="/contact" className="menu-web-link" >
+          <div>Contact </div>
+        </Link>
+        
       </div>
       <MenuOverlay menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         
