@@ -23,6 +23,7 @@
 
 .home-welcome-container h1{
 font-size: 5vw;
+letter-spacing: .09cm;
 }
 
 .home-welcome-container {
@@ -72,7 +73,7 @@ font-size: 5vw;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 57%, rgba(0,0,0,0.8) 75%, rgba(0,0,0,0.75) 79%, rgba(0,0,0,0.7) 81%, rgba(0,0,0,0.6) 84%, rgba(0,0,0,0.5) 88%, rgba(0,0,0,0.4) 91%, rgba(0,0,0,0.3) 94%, rgba(0,0,0,0.2) 96%, rgba(0,0,0,0.1) 98%, rgba(0,0,0,0) 100%);
-  opacity: 80%;
+  opacity: 90%;
   // z-index: 1000;
 }
 
@@ -113,7 +114,7 @@ font-size: 5vw;
 
 .home-content-view-more-button:hover {
   color: #2b2b2b;
-  background-color: #fff;
+  background-color: #E1C597;
 }
 
 @media only screen and (max-width: 700px) {

@@ -8,7 +8,16 @@
     font-size: 1rem;
     cursor: pointer;
     line-height: 1.1;
-    background-color: #fff;
-    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
-    font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+
+    
+    font-family: Arial;
+    background-color: rgba(89, 89, 89, 0.13);
+    background-image: linear-gradient(to top, #313131, #444444 33%);
+    color: #E1C597;
+    background: rgba(19, 19, 19, 0.623);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
