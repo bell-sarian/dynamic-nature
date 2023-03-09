@@ -23,14 +23,15 @@ export default function Home() {
 
       {/* Section 1 */}
       <div className="home-welcome-container">
-        <div>
-          <h1>Dynamic <br/> web-based art.</h1>
+      <div className="home-welcome-container-preface-text">
+          <div>GRAPHICS, UI/UX DESIGN, CREATIVE DIRECTION, AND ENGINEERING BY GF CUBED COLLECTION CREATED FEBRUARY 2023. </div>
         </div>
-        <div className="home-welcome-button">
-          <Link to="/work" className="menu-web-link" >
-          <button >BROWSE WORK</button>
+        <div className="home-welcome-container-text">
+          <h1>DYNAMIC WEB-BASED ART BY ARTIST GF CUBED IN LOS ANGELES, CA. ALL GRAPHICS ARE ENGINEERED USING ONLY JS/HTML/CSS. </h1>
+        </div>
+          <Link to="/work" className="home-content-view-more-button" >
+            <div>Browse Work</div>
           </Link>
-        </div>
       </div>
       
       {/* Section 2 */}
@@ -45,7 +46,7 @@ export default function Home() {
           })}
         </div>
         <Link to="/work" className="home-content-view-more-button" >
-            <div >View More</div>          
+            <div>View More</div>          
         </Link>
       </div>
     </div>
