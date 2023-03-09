@@ -24,10 +24,10 @@ export default function Home() {
       {/* Section 1 */}
       <div className="home-welcome-container">
       <div className="home-welcome-container-preface-text">
-          <div>GRAPHICS, UI/UX DESIGN, CREATIVE DIRECTION, AND ENGINEERING BY GF CUBED COLLECTION CREATED FEBRUARY 2023. </div>
+          <div>GRAPHICS, UI/UX DESIGN, CREATIVE DIRECTION, AND ENGINEERING BY VSW COLLECTION ORIGIN FEBRUARY 2023. </div>
         </div>
         <div className="home-welcome-container-text">
-          <h1>DYNAMIC WEB-BASED ART BY ARTIST GF CUBED IN LOS ANGELES, CA. ALL GRAPHICS ARE ENGINEERED USING ONLY JS/HTML/CSS. </h1>
+          <h1>DYNAMIC WEB-BASED ART BY ARTIST BSW IN LOS ANGELES, CA. ALL GRAPHICS ARE ENGINEERED USING ONLY JS/HTML/CSS. </h1>
         </div>
           <Link to="/work" className="home-content-view-more-button" >
             <div>Browse Work</div>
