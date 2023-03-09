@@ -19,7 +19,7 @@
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
     background: transparent;
     font-style: normal;
-    cursor: pointer;
+    /* cursor: pointer; */
     text-decoration: none;
     border-radius: 10%;
 
@@ -34,10 +34,11 @@
     max-height: 100%;
     min-width: 50%;
     min-height: 50%;
-    -webkit-filter: blur(.1rem);
-  -moz-filter: blur(.1rem);
-  -ms-filter: blur(.1rem);
-  filter: blur(.1rem);
+    transition: all .2s ease-in-out; 
+    -webkit-filter: brightness(70%);
+  -moz-filter: brightness(70%);
+  -ms-filter: brightness(70%);
+  filter: brightness(70%);
 }
 
 .link-tile-container h3{

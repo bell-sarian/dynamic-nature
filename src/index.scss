@@ -36,8 +36,22 @@ code {
 }
 
 ::selection {
-  background: #97bde17d; /* WebKit/Blink Browsers */
+  background: #363636bb; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #97bde17d; /* Gecko Browsers */
+  background: #363636bb; /* Gecko Browsers */
+}
+
+.rounded{
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.pointed{
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 50%;
+  margin-bottom: 20rem;
 }

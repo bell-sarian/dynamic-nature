@@ -24,7 +24,7 @@ export default function Home() {
       {/* Section 1 */}
       <div className="home-welcome-container">
       <div className="home-welcome-container-preface-text">
-          <div>GRAPHICS, UI/UX DESIGN, CREATIVE DIRECTION, AND ENGINEERING BY VSW COLLECTION ORIGIN FEBRUARY 2023. </div>
+          <div>GRAPHICS, UI/UX DESIGN, CREATIVE DIRECTION, AND ENGINEERING BY BSW. THIS WEBSITE IS MADE USING REACT, AND ALL ART IS BASED ON JAVASCRIPT, HTML, AND CSS. PROJECT ORIGIN ORIGIN FEBRUARY 2023. </div>
         </div>
         <div className="home-welcome-container-text">
           <h1>DYNAMIC WEB-BASED ART BY ARTIST BSW IN LOS ANGELES, CA. ALL GRAPHICS ARE ENGINEERED USING ONLY JS/HTML/CSS. </h1>
