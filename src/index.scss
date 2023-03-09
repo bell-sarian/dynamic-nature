@@ -1,18 +1,29 @@
-// @font-face {
-//   font-family: 'Sequel Sans Book Disp';
-//   src: url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('embedded-opentype'), /* Internet Explorer */
-//        url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('woff2'),             /* Super Modern Browsers */
-//        url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('woff'),              /* Pretty Modern Browsers */
-//        url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('truetype'),          /* Safari, Android, iOS */
-//        url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('svg');               /* Legacy iOS */
-// }
+@font-face {
+  font-family: 'Sequel Sans';
+  src: url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('embedded-opentype'), /* Internet Explorer */
+       url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('woff2'),             /* Super Modern Browsers */
+       url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('woff'),              /* Pretty Modern Browsers */
+       url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('truetype'),          /* Safari, Android, iOS */
+       url('./Assets/fonts/Sequel-Sans/Sequel-Sans/SequelSansTTF/SequelSansBookDisp.ttf') format('svg');               /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('./Assets/fonts/coolvetica/coolvetica-rg.otf') format('embedded-opentype'), /* Internet Explorer */
+       url('./Assets/fonts/coolvetica/coolvetica-rg.otf') format('woff2'),             /* Super Modern Browsers */
+       url('./Assets/fonts/coolvetica/coolvetica-rg.otf') format('woff'),              /* Pretty Modern Browsers */
+       url('./Assets/fonts/coolvetica/coolvetica-rg.otf') format('truetype'),          /* Safari, Android, iOS */
+       url('./Assets/fonts/coolvetica/coolvetica-rg.otf') format('svg');               /* Legacy iOS */
+}
 
 body {
-  background-color: rgb(21, 21, 21);
+  background-color: rgb(0, 0, 0);
   margin: 0;
-  font-family:  'Helvetica Neue','Roboto', 'Segoe UI', 'Oxygen',
+  // 'Coolvetica', 'Sequel Sans Semi Bold Body', 'Ariel', 
+  font-family: 'Helvetica Neue','Roboto', 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
     sans-serif;
+    letter-spacing: .05cm;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
@@ -25,8 +36,22 @@ code {
 }
 
 ::selection {
-  background: #e1c5977d; /* WebKit/Blink Browsers */
+  background: #363636bb; /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: #e1c5977d; /* Gecko Browsers */
+  background: #363636bb; /* Gecko Browsers */
+}
+
+.rounded{
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.pointed{
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 50%;
+  margin-bottom: 20rem;
 }

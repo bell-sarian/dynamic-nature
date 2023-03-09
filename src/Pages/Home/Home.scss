@@ -15,21 +15,45 @@
   // z-index: 9999;
   // height: 100vh;
   width: 100vw;
-  color: #E1C597;
+  // color: #ffffff;
   display: flex;
   flex-direction: column;
   // border: 1px blue solid;
 }
 
 .home-welcome-container h1{
-font-size: 5vw;
-letter-spacing: .09cm;
+  color: #ffffff;
+  font-size: 5vw;
+  letter-spacing: .09cm;
+}
+
+.home-welcome-container-text h1 {
+  background: #00000025;
+  color:#ffffff7e;
+  backdrop-filter: invert(1);
+  
+}
+
+.home-welcome-container-preface-text {
+  position: absolute;
+  top: 1%;
+  left: 35%;
+  font-size: .25cm;
+  font-weight: 400;
+  letter-spacing: .04cm;
+  font-style: italic;
+  width: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff6b;
 }
 
 .home-welcome-container {
   // position: relative;
   z-index: 10;
-  padding: 0vh 10vw 0vh 10vw;
+  padding: 0vh 5vw 0vh 5vw;
   // width: 100vw;
   height: 100vh;
   display: flex;
@@ -38,31 +62,39 @@ letter-spacing: .09cm;
 }
 
 .home-welcome-button button {
-  color: #E1C597;
-  transition: 0.3s;
-  padding: 15px 20px;
+  color: #ffffff;
 
-  background: rgba( 38, 38, 38, 0.3 );
-  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 1.5px );
-  -webkit-backdrop-filter: blur( 1.5px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    background: transparent;
+    font-style: normal;
+    // cursor: pointer;
+    text-decoration: none;
+    transition: all .2s ease-in-out; 
+
+    padding: 15px 20px;
+
+    background: rgba( 38, 38, 38, 0.3 );
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .home-welcome-button button:hover {
-  background: rgba( 109, 109, 109, 0.3 );
-  box-shadow: 0 8px 32px 0 rgba(135, 50, 31, 0.37);
-  backdrop-filter: blur( 1.5px );
-  -webkit-backdrop-filter: blur( 1.5px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  color: #2b2b2b;
+  background-color: #ffffff;
 
 }
 
 
 
 .home-content-container2 {
+  z-index: 100;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,7 +105,7 @@ letter-spacing: .09cm;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 57%, rgba(0,0,0,0.8) 75%, rgba(0,0,0,0.75) 79%, rgba(0,0,0,0.7) 81%, rgba(0,0,0,0.6) 84%, rgba(0,0,0,0.5) 88%, rgba(0,0,0,0.4) 91%, rgba(0,0,0,0.3) 94%, rgba(0,0,0,0.2) 96%, rgba(0,0,0,0.1) 98%, rgba(0,0,0,0) 100%);
-  opacity: 90%;
+  // opacity: 100;
   // z-index: 1000;
 }
 
@@ -88,7 +120,8 @@ letter-spacing: .09cm;
 }
 
 .home-content-view-more-button {
-    color: #E1C597;
+    color: #ffffff;
+    width: fit-content;
 
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -97,8 +130,7 @@ letter-spacing: .09cm;
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
     background: transparent;
-    font-style: normal;
-    cursor: pointer;
+    // cursor: pointer;
     text-decoration: none;
     transition: all .2s ease-in-out; 
 
@@ -114,7 +146,7 @@ letter-spacing: .09cm;
 
 .home-content-view-more-button:hover {
   color: #2b2b2b;
-  background-color: #E1C597;
+  background-color: #ffffff;
 }
 
 @media only screen and (max-width: 700px) {
@@ -130,7 +162,7 @@ letter-spacing: .09cm;
   left: 70%;
   width: 25rem;
   height: 25rem;
-  background: #FF8B01;
+  background: #a0a0a0;
   border-radius: 24% 76% 77% 23% / 30% 30% 70% 70%;
   filter: blur(6rem);
   animation: shape1 20s infinite;
@@ -169,7 +201,7 @@ letter-spacing: .09cm;
   left: 40%;
   width: 35rem;
   height: 25rem;
-  background:  #eb5701;
+  background:  #303030;
   border-radius: 73% 27% 77% 23% / 53% 4% 96% 47%;
   filter: blur(12rem);
   animation: shape2 35s infinite;
@@ -206,7 +238,7 @@ letter-spacing: .09cm;
   left: 80%;
   width: 25rem;
   height: 25rem;
-  background: #eb341c;
+  background: #b3b3b3;
   border-radius: 70% 30% 80% 20% / 42% 25% 75% 58%;
   filter: blur(14rem);
   animation: shape3 35s infinite;
@@ -243,7 +275,7 @@ letter-spacing: .09cm;
   left: 70%;
   width: 25rem;
   height: 25rem;
-  background: #ff5125;
+  background: #8d8d8d;
   border-radius: 24% 76% 77% 23% / 30% 30% 70% 70%;
   filter: blur(5rem);
   // animation: shape1 20s infinite;
@@ -255,7 +287,7 @@ letter-spacing: .09cm;
   left: 40%;
   width: 35rem;
   height: 25rem;
-  background: #E60001;
+  background: #696969;
   border-radius: 73% 27% 77% 23% / 53% 4% 96% 47%;
   filter: blur(5rem);
   animation: shape5 10s infinite;
@@ -292,7 +324,7 @@ letter-spacing: .09cm;
   left: 80%;
   width: 25rem;
   height: 25rem;
-  background: rgb(255, 136, 24);
+  background: rgb(0, 0, 0);
   border-radius: 70% 30% 80% 20% / 42% 25% 75% 58%;
   filter: blur(5rem);
   animation: shape3 30s infinite;

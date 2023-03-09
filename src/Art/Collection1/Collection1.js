@@ -19,7 +19,7 @@ export default function Collection1()  {
 
   const [animate, setAnimate] = useState(false)
   let content = [
-    "Ocean Sun is an impressionistic art series consisting of five animated images of the sun or moon over the ocean at different times of the day.", 
+    "Ocean Sun is an impressionistic art series consisting of seven animated images of the sun or moon over the ocean at different times of the day.", 
     "The images depict different times of day and change real time to match the users's time of day."
   ]
   const options = [

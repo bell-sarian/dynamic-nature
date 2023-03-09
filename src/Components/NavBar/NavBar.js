@@ -51,16 +51,16 @@ export default function NavBar()  {
       <div className="nav-menu-buttons" style={ lightContent ? {color: '#000'} : { color: '#E1C597'}}>
         {/*  */}
         <Link to="/work" className={ lightContent ? "menu-web-link-dark" : "menu-web-link"} >
-          <div >Work </div>
+          <div >WORK </div>
         </Link>
         <Link to="/about" className={ lightContent ? "menu-web-link-dark" : "menu-web-link"} >
-          <div>About </div>
+          <div>ABOUT </div>
         </Link>
         <Link to="/services" className={ lightContent ? "menu-web-link-dark" : "menu-web-link"} >
-          <div>Services </div>
+          <div>SERVICES </div>
         </Link>
         <Link to="/contact" className={ lightContent ? "menu-web-link-dark" : "menu-web-link"} >
-          <div>Contact </div>
+          <div>CONTACT </div>
         </Link>
         
       </div>

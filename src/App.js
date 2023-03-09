@@ -1,23 +1,56 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
-import logo from './logo.svg';
 import './App.scss';
-import NavBar from './Components/NavBar/NavBar.js';
 import {
-
   Routes,
   Route,
   Link
 } from "react-router-dom";
-
+import { motion } from 'framer-motion';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Work from "./Pages/Work/Work";
 import Collection1 from './Art/Collection1/Collection1';
+// import Cursor from "./Components/Cursor/Cursor";
 
 function App() {
+
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0
+  })
+
+  console.log(mousePosition)
+
+  useEffect(() => {
+    const mouseMove = (e) => {
+      console.log(e)
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY
+      })
+    }
+    window.addEventListener('mousemove', mouseMove)
+
+    return() => {
+      window.removeEventListener('mousemove', mouseMove)
+    }
+  }, [])
+
+const variants = {
+  default: {
+    x: mousePosition.x - 16,
+    y: mousePosition.y - 16
+  }
+}
+
   return (
     <div>
+      <motion.div 
+        className='cursor'
+        variants={variants}
+        animate='default'
+      />
        <Routes>
           <Route index element={<Home />} />
           <Route path="About" element={<About />} />
@@ -35,36 +68,3 @@ function App() {
 
 export default App;
 
-function Layout() {
-  return (
-    <div>
-      {/* A "layout route" is a good place to put markup you want to
-          share across all the pages on your site, like navigation. */}
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/work">Work</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/Collection1">Collection I</Link>
-          </li>
-          <li>
-            <Link to="/nothing-here">Nothing Here</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <hr />
-
-      {/* An <Outlet> renders whatever child route is currently active,
-          so you can think about this <Outlet> as a placeholder for
-          the child routes we defined above. */}
-    </div>
-  );
-}
