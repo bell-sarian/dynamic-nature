@@ -2,7 +2,7 @@
   "name": "dynamic-nature",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://bell-sarian.github.io/dynamic-nature}",
+  "homepage": "https://bell-sarian.github.io/dynamic-nature}",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -12,6 +12,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^10.2.3",
+    "gh-pages": "^5.0.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "node-sass": "^8.0.0",
