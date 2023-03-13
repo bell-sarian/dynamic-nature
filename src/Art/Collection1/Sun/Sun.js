@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import styles from './Sun.scss';
 
 export default function Sun(props)  {
   const [isHovering, setIsHovering] = useState(false);
+  // const [timeOfDaySun, setTimeOfDaySun ] = useState(props.sunStyle);
 
   const mediaMatch = window.matchMedia('(min-width: 500px)');
   const [matches, setMatches] = useState(mediaMatch.matches);
@@ -13,6 +15,9 @@ export default function Sun(props)  {
     return () => mediaMatch.removeListener(handler);
   });
 
+  function setColor (newColor){
+    document.documentElement.style.setProperty('--logo-color', newColor);
+}
 
   const handleMouseEnter = () => {
     setIsHovering(true);
@@ -28,6 +33,7 @@ export default function Sun(props)  {
         className={"sun " + props.sunStyle }
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        // style={styles}
         ></div>
   );
   
