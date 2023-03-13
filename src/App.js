@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 import './App.scss';
 import {
@@ -6,6 +6,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { motion } from 'framer-motion';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Work from "./Pages/Work/Work";
@@ -13,8 +14,6 @@ import Collection1 from './Art/Collection1/Collection1';
 // import Cursor from "./Components/Cursor/Cursor";
 
 function App() {
-
-  // REMOVED MOUSE EFFECT
 
 //   const [mousePosition, setMousePosition] = useState({
 //     x: 0,

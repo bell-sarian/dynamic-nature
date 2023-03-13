@@ -1,8 +1,15 @@
 
-import React from "react";
+import React, { Component, useState } from "react";
+import Styles from "./MenuOverlay.scss";
+import {
+    createBrowserRouter,
+    RouterProvider,
+  } from "react-router-dom";
 
+import Collection1 from "../../../Art/Collection1/Collection1";
 import App from "../../../App";
 import About from "../../../Pages/About/About";
+import Home from "../../../Pages/Home/Home";
 import Work from "../../../Pages/Work/Work";
 
 import GridItem from "../GridItem/GridItem";
@@ -30,8 +37,11 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
         left: 0,
         visibility: "hidden",
         opacity: 10,
+        left: 0,
+        top: 0,
         width: "100vw",
         height: "100vh",
+        position: "absolute",
         transform: "translateY(-100%)",
         transition: "all .9s ease-in-out",
     }

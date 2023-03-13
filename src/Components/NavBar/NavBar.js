@@ -1,10 +1,14 @@
 import React, {  useState, useEffect } from "react";
+import Styles from "./NavBar.scss";
+import GridIcon from "../../Assets/grid_icon.svg";
 import BWGF3 from "../../Assets/BW-GF3.svg";
 import TANGF3 from "../../Assets/TAN-GF3.svg";
 import GridMenu from "../GridMenu/GridMenu";
 import MenuOverlay from "../GridMenu/MenuOverlay/MenuOverlay";
+import { color } from "@mui/system";
 import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
+import { LockTwoTone } from "@mui/icons-material";
 
 
 
@@ -14,13 +18,13 @@ export default function NavBar()  {
 
   const location = useLocation();
 
-  // const linkStyleLight = "menu-web-link"
-  // const linkStyleDark = "menu-web-link-dark"
+  const linkStyleLight = "menu-web-link"
+  const linkStyleDark = "menu-web-link-dark"
 
   useEffect(() => {
     console.log(location.pathname)
       
-    if(location.pathname === "/collection1") {
+    if(location.pathname == "/collection1") {
       setLightContent(true)
     }
     else {

@@ -1,6 +1,7 @@
 // Source: https://jsfiddle.net/psullivan6/ma6e78m0/ 
 
 import React, { useState, useEffect } from "react";
+import styles from './Stars.scss';
 
 // Twinkling Night Sky by Sharna
 

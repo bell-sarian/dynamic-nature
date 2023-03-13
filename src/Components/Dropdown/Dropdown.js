@@ -2,6 +2,7 @@ import * as React from 'react';
 import './Dropdown.css'
 
 export const Dropdown = ({ onChange, items }) => {
+    const [open, setOpen] = React.useState(false);
   
     
     return (
