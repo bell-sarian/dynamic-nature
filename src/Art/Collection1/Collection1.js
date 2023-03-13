@@ -1,5 +1,4 @@
 import React, { Component, useState, useEffect } from "react";
-import Styles from "./Collection1.css";
 import Block from "./Block/Block";
 import Sun from "./Sun/Sun";
 import Stars from './Stars/Stars';

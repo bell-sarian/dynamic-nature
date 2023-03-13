@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // import styles from './Sun.scss';
 import InfoIcon from '@mui/icons-material/Info';
 
-export default function InfoButton(props)  {
+export default function InfoButton()  {
   const [isHovering, setIsHovering] = useState(false);
   // const [timeOfDaySun, setTimeOfDaySun ] = useState(props.sunStyle);
 
@@ -14,9 +14,9 @@ export default function InfoButton(props)  {
     setIsHovering(false);
   };
 
-  const handleClick = () => {
-    // setModalOpen(!modalOpen)
-  }
+  // const handleClick = () => {
+     // setModalOpen(!modalOpen)
+  // }
 
   
   return (

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import styles from './Modal.css';
+import React from "react";
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function Modal({modalOpen, setModalOpen, content})  {
@@ -18,7 +17,7 @@ export default function Modal({modalOpen, setModalOpen, content})  {
                     <div className="content">
                         {content.map((item, index) => {
                             return (
-                                <p>{item}</p>
+                                <p key={index}>{item}</p>
                             )
                         })}
                         </div>

@@ -1,5 +1,4 @@
-import React, { Component, useState } from "react";
-import styles from "./GridItem.scss";
+import React from "react";
 import { Link } from "react-router-dom";
 
 export default function GridItem(props)  {
