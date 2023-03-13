@@ -18,6 +18,7 @@
   // color: #ffffff;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   // border: 1px blue solid;
 }
 
@@ -151,12 +152,17 @@
 }
 
 @media only screen and (max-width: 700px) {
+.home-welcome-container {
+  display: flex;
+  justify-content: center;
+  width: 90vw;
+}
 .home-welcome-container h1{
-  font-size: 10vw;
+  font-size: 2rem;
 }
 
 .home-welcome-container-preface-text {
-  // display: none;
+  display: none;
 }
 
 }
