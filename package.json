@@ -2,6 +2,7 @@
   "name": "dynamic-nature",
   "version": "0.1.0",
   "private": true,
+  "start_url": ".",
   "homepage": "https://gf-cubed-5z8m01o42-bellasarian.vercel.app",
   "dependencies": {
     "@emotion/react": "^11.10.5",
