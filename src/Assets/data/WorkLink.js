@@ -6,11 +6,16 @@ const WorkLinkData = [
         image: OceanSusnetImage,
         link: "/collection1"
     },
-    // {
-    //     title: "Collection II: Grassy Knoll",
-    //     image: OceanSusnetImage,
-    //     link: "/collection2"
-    // },
+    {
+        title: "Collection II: Grassy Knoll",
+        image: OceanSusnetImage,
+        link: "/collection2"
+    },
+    {
+        title: "Collection III: Static",
+        image: OceanSusnetImage,
+        link: "/collection3"
+    },
     
 ]
 

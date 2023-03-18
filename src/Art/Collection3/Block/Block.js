@@ -4,7 +4,7 @@ import "./Block.scss";
 export default function Block(props)  {
   const [isHovering, setIsHovering] = useState(false);
   const [ animateFlag, setAnimateFlag] = useState(false)
-  const [ duration, setDuration ] = useState(props.numSubItems > 1 ? Math.floor(Math.random() * (15 - 2) + 2) : Math.floor(Math.random() * (20 - 15) + 15))
+  const [ duration, setDuration ] = useState(Math.floor(Math.random() * (30 - 10) + 10))
   const [ blockZIndex, setBlockZIndex ] = useState(props.horizon == true ? 9 : 100);
 
   // Upon component mounting, set off animation flag to true.
@@ -63,20 +63,21 @@ export default function Block(props)  {
   //    Third - OG Color + 20% lumocity increase 
   //    Fourth - OG Color + 30% lumocity increase 
   let keyframesHorizon =
-  `@-webkit-keyframes ${animationName} {
-    0%   { background-color: ${props.blockColor}; }
-    25%  { background-color: ${ColorLuminance(props.blockColor, .05)} }
-    50%  { background-color: ${ColorLuminance(props.blockColor, .07)}}
-    75%  { background-color: ${ColorLuminance(props.blockColor, .10)} }
-    100% { background-color: ${props.blockColor}; }
-  }`;
-  
+    `@-webkit-keyframes ${animationName} {
+        0%   { background-color: ${props.blockColor}; }
+        25%  { background-color: ${ColorLuminance(props.blockColor, .05)} }
+        50%  { background-color: ${ColorLuminance(props.blockColor, .07)}}
+        75%  { background-color: ${ColorLuminance(props.blockColor, .10)} }
+        100% { background-color: ${props.blockColor}; }
+        
+    }`;
+    
     let keyframesOcean =
     `@-webkit-keyframes ${animationName} {
         0%   { background-color: ${props.blockColor}; }
-        25%  { background-color: ${ColorLuminance(props.blockColor, .10)} }
-        50%  { background-color: ${ColorLuminance(props.blockColor, .20)}}
-        75%  { background-color: ${ColorLuminance(props.blockColor, .30)} }
+        25%  { background-color: ${ColorLuminance(props.blockColor, .20)} }
+        50%  { background-color: ${ColorLuminance(props.blockColor, .40)}}
+        75%  { background-color: ${ColorLuminance(props.blockColor, .60)} }
         100% { background-color: ${props.blockColor}; }
         
     }`;

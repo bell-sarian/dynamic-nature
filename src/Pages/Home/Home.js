@@ -36,7 +36,7 @@ export default function Home() {
       
       {/* Section 2 */}
       <div className="home-content-container2">
-        <h1> Recent Work</h1>
+        <h1>Recent Work</h1>
 
         <div className="home-content-container2-links" > 
           {WorkLinkData.map((item, index) => {
