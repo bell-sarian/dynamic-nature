@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import Styles from "./Collection2.css";
 import Block from "./Block/Block";
+import House from "./House/House";
 // import Sun from "./Sun/Sun";
 // import Stars from './Stars/Stars';
 import InfoButton from "../../Components/InfoButton/InfoButton";
@@ -85,24 +86,25 @@ export default function Collection2()  {
     return (
       <div>
         
-      <div className="collection-two-container">
-
-      {summer.map((items, index) => {
-          
-          return (
-            <div key={index} className="row-container">
-              {/* Inner loop to iterate through color matrix column-by-column */}
-              {items.map((subItems, subIndex) => {
-
-                return (
-                  <Block  key={items.color + "-" + subIndex} blockNumber={index} blockSubNumber={subIndex} blockColor={subItems.color} blockSecondColor={subItems.color2} blockWidth={subItems.width} blockHeight={subItems.height} blockDuration={subItems.duration} horizon={subItems.horizon} numSubItems={items.length} />
-                )
-              })}
-            </div>
-          )
-        })}
+        <div className="collection-two-container">
+          <House />
         
-      </div>
+          {summer.map((items, index) => {
+            
+            return (
+              <div key={index} className="row-container">
+                {/* Inner loop to iterate through color matrix column-by-column */}
+                {items.map((subItems, subIndex) => {
+
+                  return (
+                    <Block  key={items.color + "-" + subIndex} blockNumber={index} blockSubNumber={subIndex} blockColor={subItems.color} blockSecondColor={subItems.color2} blockWidth={subItems.width} blockHeight={subItems.height} blockDuration={subItems.duration} horizon={subItems.horizon} numSubItems={items.length} />
+                  )
+                })}
+              </div>
+            )
+          })}
+          
+        </div>
 
         
         
