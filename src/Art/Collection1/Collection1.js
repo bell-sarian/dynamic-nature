@@ -378,16 +378,12 @@ export default function Collection1()  {
         {"color": "#BCB3A4", "duration": "5", "width": "30vw", "height": "4vh", "horizon": false },
         {"color": "#BAB0A4", "duration": "6", "width": "29vw", "height": "4vh", "horizon": false },
       ],
-
-
       [{"color": "#C5B9AB", "duration": "4", "width": "3vw", "height": "3vh", "horizon": false },
         {"color": "#B8AEA5", "duration": "2", "width": "10vw", "height": "3vh", "horizon": false },
         {"color": "#BAAEA0", "duration": "3", "width": "15vw", "height": "3vh", "horizon": false },
         {"color": "#B4AA9E", "duration": "6", "width": "60vw", "height": "3vh", "horizon": false },
         {"color": "#BCB2AA", "duration": "5", "width": "12vw", "height": "3vh", "horizon": false },
       ],
-
-      
     ]
     // DONE
     const daysun = [

@@ -11,6 +11,8 @@ import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Work from "./Pages/Work/Work";
 import Collection1 from './Art/Collection1/Collection1';
+import Collection2 from './Art/Collection2/Collection2';
+import Collection3 from "./Art/Collection3/Collection3";
 // import Cursor from "./Components/Cursor/Cursor";
 
 function App() {
@@ -55,6 +57,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="About" element={<About />} />
           <Route path="Collection1" element={<Collection1 />} />
+          <Route path="Collection2" element={<Collection2 />} />
+          <Route path="Collection3" element={<Collection3 />} />
           <Route path="Work" element={<Work />} />
 
           {/* Using path="*"" means "match anything", so this route

@@ -1,0 +1,125 @@
+.house-container {
+    z-index: 10;
+    display: flex;
+}
+.house {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    height: 200px;
+    width: 260px;
+    background:#a43924;
+  }
+  .house::before {
+    content: '';
+    position: absolute;
+    top: -95px;
+    left: 33px;
+    height: 183px;
+    width: 183.5px;
+    background: #a43924;
+    transform: rotate(45deg);
+    border-top: 10px solid #85836b;
+    border-left: 10px solid #646359;
+    z-index: 2
+  }
+  .house::after {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: 15px;
+    height: 70px;
+    width: 30px;
+    background: rgb(130, 71, 52);
+    z-index: 1;
+  }
+  .window {
+    top: 25px;
+    left: 45px;
+    height: 60px;
+    width: 50px;
+    background: #b8b194;
+    z-index: 3;
+    position: absolute;
+
+  }
+  .window::before,
+  .window::after {
+    content: '';
+    position: absolute;
+    background: rgb(128, 108, 108);
+  }
+  .window::before {
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+
+  }
+  .window::after {
+    top: 50%;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+  }
+ 
+  .door {
+    /* top: 70px; */
+    left: 150px;
+    height: 130px;
+    width: 70px;
+    background: #b3ac94;
+    z-index: 3;
+    position: absolute;
+
+  }
+  
+  .door::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    border: 1px solid #616161;
+    background: #a59d9d;
+  }
+  
+
+  @media only screen and (max-width: 700px) {
+    .house {
+      top: 55%; 
+      left: 35%;
+      height: 70px;
+      width: 130px;
+    }
+
+    .house::before {
+      top: -48px;
+      left: 18px;
+      height: 83px;
+      width: 83.5px;
+    }
+
+    .door {
+      top: 5px;
+      left: 70px;
+      height: 60px;
+      width: 30px;
+    }
+
+    .door::before {
+      right: 5px;
+      height: 3px;
+      width: 3px;
+    }
+
+    .window {
+      top: 15px;
+      left: 25px;
+      height: 30px;
+      width: 25px;
+    }
+  }
