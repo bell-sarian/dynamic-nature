@@ -102,4 +102,24 @@
       height: 83px;
       width: 83.5px;
     }
+
+    .door {
+      top: 5px;
+      left: 70px;
+      height: 60px;
+      width: 30px;
+    }
+
+    .door::before {
+      right: 5px;
+      height: 3px;
+      width: 3px;
+    }
+
+    .window {
+      top: 15px;
+      left: 25px;
+      height: 30px;
+      width: 25px;
+    }
   }

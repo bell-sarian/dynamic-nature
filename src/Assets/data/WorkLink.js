@@ -1,4 +1,6 @@
 import OceanSusnetImage from '../OceanSunsetPreview.png';
+import GrassyKnollImage from '../GrassyKnollPreview.png';
+import StaticImage from '../StaticPreview.png';
 
 const WorkLinkData = [
     {
@@ -8,12 +10,12 @@ const WorkLinkData = [
     },
     {
         title: "Collection II: Grassy Knoll",
-        image: OceanSusnetImage,
+        image: GrassyKnollImage,
         link: "/collection2"
     },
     {
         title: "Collection III: Static",
-        image: OceanSusnetImage,
+        image: StaticImage,
         link: "/collection3"
     },
     
