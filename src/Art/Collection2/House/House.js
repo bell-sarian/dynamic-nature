@@ -7,6 +7,8 @@ export default function House(props)  {
   return (
       <div className="house-container">
             <div className="house">
+            <div className="door"></div>
+            <div className='window'></div>
             </div>  
       </div>
   );

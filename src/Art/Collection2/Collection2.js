@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from "react";
-import Styles from "./Collection2.css";
+import Styles from "./Collection2.scss";
 import Block from "./Block/Block";
 import House from "./House/House";
 // import Sun from "./Sun/Sun";
@@ -36,7 +36,7 @@ export default function Collection2()  {
  
   ];
 
-  let grassColors = ["#7C7B21", ];
+  let grassColors = ["#8E791F", ];
 
     // Matrix of color blocks including: 
     //   color, 
@@ -70,7 +70,7 @@ export default function Collection2()  {
         width = 100
         while(width > 0) {
           // let blade = {"color": Math.floor(Math.random()*16777215).toString(16), "width": "1vw", "height": "2vh", "horizon": false }
-          newWidth = Math.floor(Math.random() * (20 - 1) + 1)
+          newWidth = Math.floor(Math.random() * (5 - 1) + 1)
           width -= newWidth;
           let blade = {"color": grassColors[Math.floor(Math.random() * grassColors.length)], "width": newWidth + "vw", "height": height, "horizon": false }
           grassMatrixRow.push(blade);
@@ -88,7 +88,15 @@ export default function Collection2()  {
         
         <div className="collection-two-container">
           <House />
-        
+          <div class="cloud large cloud-1">
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="cloud normal cloud-2">
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <div class="cloud small cloud-3">
+            <div></div><div></div><div></div><div></div>
+          </div>        
           {summer.map((items, index) => {
             
             return (
