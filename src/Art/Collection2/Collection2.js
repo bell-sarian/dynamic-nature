@@ -11,10 +11,12 @@ import { Dropdown } from "../../Components/Dropdown/Dropdown";
 export default function Collection2()  {
 
   const [modalOpen, setModalOpen] = useState(false);
-  const [timeOfDay, setTimeOfDay] = useState("");
-  const [timeOfDayArray, setTimeOfDayArray] = useState([]);
-  const [sunStyle, setSunStyle] = useState("");
-  const [starBool, setStarBool] = useState(null);
+  const [season, setSeason] = useState("spring");
+  const [grassColor, setGrassColor] = useState("#719951");
+  const [sky, setSky] = useState([]);
+
+
+  const [grass, setGrass] = useState([]);
   const [time, setTime] = useState(new Date().getHours());
   const [TODLable, setTODLable] = useState("");
 
@@ -24,19 +26,65 @@ export default function Collection2()  {
     "The images depict different times of day and change real time to match the users's time of day."
   ]
   const options = [
-
-    { label: `Current Time: ${TODLable}`, value: 'currenttime'},
-    { label: 'Moon', value: 'moon'},
-    { label: 'Moonset', value: 'moonset' },
-    { label: 'Sunrise', value: 'sunrise' },
-    { label: 'Daytime Sun', value: 'daysun' },
-    { label: 'Pre Sunset', value: 'midsunset' },
-    { label: 'Sunset', value: 'sunset' },
-    { label: 'Moonrise', value: 'moonrise' },
- 
+    { label: 'Spring', value: 'spring' },
+    { label: 'Summer', value: 'summer'},
+    { label: 'Autumn', value: 'autumn' },
+    { label: 'Winter', value: 'winter' } 
   ];
 
-  let grassColors = ["#8E791F", ];
+
+  const handleSeasonChange = (event) => {
+    setSky([])
+    setSeason(event.target.value)
+
+      if (event.target.value === 'spring') {
+        setGrassColor('#719951')
+        grassChange()
+        setSky(spring)
+        sky.concat(grass)
+      }
+      else if (event.target.value === 'summer') {
+        setGrassColor("#798339")
+        grassChange()
+        setSky(summer)
+      }
+      else if (event.target.value === 'autumn') {
+        setGrassColor('#8E5C38')
+        grassChange()
+        setSky(spring)
+      }
+      else {
+        setGrassColor("#EAF2F7")
+        grassChange()
+        setSky(spring)
+      }
+  }
+
+
+  const grassChange = () => {
+    setGrass([])
+    let grassMatrix = [];
+    let grassMatrixRow = [];
+    let height = "2vh"
+    let width = 100
+    let newWidth = 0;
+
+    for (let j = 0; j < 15; j++) {
+      grassMatrixRow = []
+      height = Math.floor(Math.random() * (5 - 2) + 2) + "vh"
+      width = 100
+      while(width > 0) {
+        // let blade = {"color": Math.floor(Math.random()*16777215).toString(16), "width": "1vw", "height": "2vh", "horizon": false }
+        newWidth = Math.floor(Math.random() * (5 - 1) + 1)
+        width -= newWidth;
+        let blade = {"color": grassColor, "width": newWidth + "vw", "height": height, "horizon": false }
+        grassMatrixRow.push(blade);
+      }
+      grassMatrix.push(grassMatrixRow)
+    }
+    setGrass(grassMatrix)
+  }
+
 
     // Matrix of color blocks including: 
     //   color, 
@@ -45,7 +93,7 @@ export default function Collection2()  {
     //   height of block  
 
     // DONE
-    const summer = [
+    const spring = [
       [{"color": "#C9DDD4", "duration": "12", "width": "100vw", "height": "4vh", "horizon": true }],
       [{"color": "#C9DDD4", "duration": "10", "width": "100vw", "height": "7vh", "horizon": true }],
       [{"color": "#C6D7CF", "duration": "15", "width": "100vw", "height": "9vh", "horizon": true }],
@@ -59,28 +107,30 @@ export default function Collection2()  {
 
     ]
 
-      let grassMatrixRow = [];
-      let height = "2vh"
-      let width = 100
-      let newWidth = 0;
+    const summer = [
+      [{"color": "red", "duration": "12", "width": "100vw", "height": "4vh", "horizon": true }],
+      [{"color": "#C9DDD4", "duration": "10", "width": "100vw", "height": "7vh", "horizon": true }],
+      [{"color": "#C6D7CF", "duration": "15", "width": "100vw", "height": "9vh", "horizon": true }],
+      [{"color": "#BCCFC9", "duration": "20", "width": "100vw", "height": "6vh", "horizon": true }],
+      [{"color": "#B7CAC4", "duration": "20", "width": "100vw", "height": "3vh", "horizon": true }],
+      [{"color": "#B8C9C1", "duration": "20", "width": "100vw", "height": "8vh", "horizon": true }],
+      [{"color": "#B7C7BD", "duration": "20", "width": "100vw", "height": "5vh", "horizon": true }],
+      [{"color": "#B3C3B9", "duration": "20", "width": "100vw", "height": "6vh", "horizon": true }],
+      [{"color": "#BBBEB3", "duration": "20", "width": "100vw", "height": "9vh", "horizon": true }],
+      [{"color": "#B9BCAB", "duration": "20", "width": "100vw", "height": "6vh", "horizon": true }],
 
-      for (let j = 0; j < 15; j++) {
-        grassMatrixRow = []
-        height = Math.floor(Math.random() * (5 - 2) + 2) + "vh"
-        width = 100
-        while(width > 0) {
-          // let blade = {"color": Math.floor(Math.random()*16777215).toString(16), "width": "1vw", "height": "2vh", "horizon": false }
-          newWidth = Math.floor(Math.random() * (5 - 1) + 1)
-          width -= newWidth;
-          let blade = {"color": grassColors[Math.floor(Math.random() * grassColors.length)], "width": newWidth + "vw", "height": height, "horizon": false }
-          grassMatrixRow.push(blade);
-        }
-        summer.push(grassMatrixRow)
-      }
-      
-      console.log(summer)
-      
+    ]
+    
 
+    useEffect(() => {
+      
+        setSky(spring)
+        grassChange()
+        console.log(sky)
+        console.log(grass)
+        sky.concat(grass)
+      
+      }, [])
     
     
     return (
@@ -97,7 +147,7 @@ export default function Collection2()  {
           <div class="cloud small cloud-3">
             <div></div><div></div><div></div><div></div>
           </div>        
-          {summer.map((items, index) => {
+          {sky.map((items, index) => {
             
             return (
               <div key={index} className="row-container">
@@ -111,9 +161,12 @@ export default function Collection2()  {
               </div>
             )
           })}
-          
+
         </div>
 
+        <div className="season-select-container">
+          <Dropdown items={options} onChange={handleSeasonChange} />
+        </div>
         
         
       </div>
