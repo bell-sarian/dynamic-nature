@@ -1,6 +1,6 @@
 
 import React, { Component, useState } from "react";
-import Styles from "./MenuOverlay.scss";
+import "./MenuOverlay.scss";
 import {
     createBrowserRouter,
     RouterProvider,
@@ -37,11 +37,8 @@ export default function MenuOverlay({ menuOpen, setMenuOpen})  {
         left: 0,
         visibility: "hidden",
         opacity: 10,
-        left: 0,
-        top: 0,
         width: "100vw",
         height: "100vh",
-        position: "absolute",
         transform: "translateY(-100%)",
         transition: "all .9s ease-in-out",
     }
