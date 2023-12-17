@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from "react";
-import Styles from "./Collection3.css";
+import "./Collection3.css";
 import Block from "./Block/Block";
 // import Sun from "./Sun/Sun";
 // import Stars from './Stars/Stars';

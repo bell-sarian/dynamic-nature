@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from './Modal.css';
+import './Modal.css';
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function Modal({modalOpen, setModalOpen, content})  {

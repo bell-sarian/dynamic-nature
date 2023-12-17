@@ -1,5 +1,5 @@
-import React, { Component, useState, useEffect } from "react";
-import Styles from "./Collection2.scss";
+import React, { useState, useEffect } from "react";
+import "./Collection2.scss";
 import Block from "./Block/Block";
 import House from "./House/House";
 // import Sun from "./Sun/Sun";
@@ -91,6 +91,7 @@ export default function Collection2()  {
     //   duration of linear gradient animation
     //   width of block
     //   height of block  
+    let grassColors = ["#8E791F", ];
 
     // DONE
     const spring = [
@@ -120,6 +121,25 @@ export default function Collection2()  {
       [{"color": "#B9BCAB", "duration": "20", "width": "100vw", "height": "6vh", "horizon": true }],
 
     ]
+
+    let grassMatrixRow = [];
+      let height = "2vh"
+      let width = 100
+      let newWidth = 0;
+
+      for (let j = 0; j < 15; j++) {
+        grassMatrixRow = []
+        height = Math.floor(Math.random() * (5 - 2) + 2) + "vh"
+        width = 100
+        while(width > 0) {
+          // let blade = {"color": Math.floor(Math.random()*16777215).toString(16), "width": "1vw", "height": "2vh", "horizon": false }
+          newWidth = Math.floor(Math.random() * (5 - 1) + 1)
+          width -= newWidth;
+          let blade = {"color": grassColors[Math.floor(Math.random() * grassColors.length)], "width": newWidth + "vw", "height": height, "horizon": false }
+          grassMatrixRow.push(blade);
+        }
+        summer.push(grassMatrixRow)
+      }
     
 
     useEffect(() => {

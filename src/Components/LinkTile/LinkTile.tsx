@@ -1,5 +1,5 @@
 import React, {  useState } from "react";
-import Styles from "./LinkTile.css";
+import "./LinkTile.css";
 
 import { color } from "@mui/system";
 import { Link } from "react-router-dom";

@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./GridMenu.scss";
+import "./GridMenu.scss";
 import GridIcon from "../../Assets/grid_icon.svg";
 import GridIconDark from "../../Assets/grid_icon_dark.svg";
 import GridOpenIcon from "../../Assets/grid_open_icon.svg";
