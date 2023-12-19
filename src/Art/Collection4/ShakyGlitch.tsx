@@ -12,18 +12,9 @@ export default function Collection2() {
   const [modalOpen, setModalOpen] = useState(false);
   const [season, setSeason] = useState("spring");
   const [grassColor, setGrassColor] = useState("#719951");
-
-  const [springArray, setSpringArray] = useState([]);
-
   const [sky, setSky] = useState([]);
-  const [grass, setGrass] = useState([]);
-  console.log("sky");
-  console.log(sky);
-  console.log("grass");
-  console.log(grass);
-  console.log("springArray");
-  console.log(springArray);
 
+  const [grass, setGrass] = useState([]);
   const [time, setTime] = useState(new Date().getHours());
   const [TODLable, setTODLable] = useState("");
 
@@ -47,7 +38,7 @@ export default function Collection2() {
       setGrassColor("#719951");
       grassChange();
       setSky(spring);
-      // sky.concat(grass);
+      sky.concat(grass);
     } else if (event.target.value === "summer") {
       setGrassColor("#798339");
       grassChange();
@@ -81,7 +72,6 @@ export default function Collection2() {
         width -= newWidth;
         let blade = {
           color: grassColor,
-          duration: '' + Math.floor(Math.random() * (10 - 1) + 1),
           width: newWidth + "vw",
           height: height,
           horizon: false,
@@ -90,10 +80,7 @@ export default function Collection2() {
       }
       grassMatrix.push(grassMatrixRow);
     }
-    console.log(grassMatrix);
-    console.log(grassMatrix);
-    // setGrass(grassMatrix);
-    return grassMatrix;
+    setGrass(grassMatrix);
   };
 
   // Matrix of color blocks including:
@@ -290,21 +277,24 @@ export default function Collection2() {
   ];
 
   useEffect(() => {
-    let fullSpring = spring;
-    let allGrass = grassChange();
 
-    allGrass.forEach((g) => {
-      fullSpring.push(g);
-    });
-    
-    // const interval = setInterval(() => {
-      setSpringArray(fullSpring);
-    // }, 1000);
+    setSky(spring);
+      grassChange();
+      console.log("spring");
+      console.log(spring);
+      console.log("sky");
+      console.log(sky);
+      console.log("grass");
+      console.log(grass);
+      sky.concat(grass);
 
-    // grassChange()
-
-    // sky.concat(grass)
-  }, []);
+    const intervalId = setInterval(() => {
+      
+    }, 1000);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [sky]);
 
   return (
     <div>
@@ -328,30 +318,49 @@ export default function Collection2() {
           <div></div>
           <div></div>
         </div>
-        {springArray.map((items, index) => {
+        {sky.map((items, index) => {
           return (
             <div key={index} className="row-container">
-              {/* {console.log('items ' + index)}
-              {console.log(items)} */}
               {/* Inner loop to iterate through color matrix column-by-column */}
               {items.map((subItems, subIndex) => {
-                // {console.log('subItems ' + subIndex)}
-                // {console.log(subItems)}
                 return (
-              <Block
-                key={items.color + "-" + subIndex}
-                blockNumber={index}
-                blockSubNumber={subIndex}
-                blockColor={subItems.color}
-                blockSecondColor={subItems.color2}
-                blockWidth={subItems.width}
-                blockHeight={subItems.height}
-                blockDuration={subItems.duration}
-                horizon={subItems.horizon}
-                numSubItems={items.length}
-              />
-              );
-              })} 
+                  <Block
+                    key={items.color + "-" + subIndex}
+                    blockNumber={index}
+                    blockSubNumber={subIndex}
+                    blockColor={subItems.color}
+                    blockSecondColor={subItems.color2}
+                    blockWidth={subItems.width}
+                    blockHeight={subItems.height}
+                    blockDuration={subItems.duration}
+                    horizon={subItems.horizon}
+                    numSubItems={items.length}
+                  />
+                );
+              })}
+            </div>
+          );
+        })}
+        {grass.map((items, index) => {
+          return (
+            <div key={index} className="row-container">
+              {/* Inner loop to iterate through color matrix column-by-column */}
+              {items.map((subItems, subIndex) => {
+                return (
+                  <Block
+                    key={items.color + "-" + subIndex}
+                    blockNumber={index}
+                    blockSubNumber={subIndex}
+                    blockColor={subItems.color}
+                    blockSecondColor={subItems.color2}
+                    blockWidth={subItems.width}
+                    blockHeight={subItems.height}
+                    blockDuration={subItems.duration}
+                    horizon={subItems.horizon}
+                    numSubItems={items.length}
+                  />
+                );
+              })}
             </div>
           );
         })}
