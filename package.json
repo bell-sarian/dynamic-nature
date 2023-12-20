@@ -27,7 +27,6 @@
     "react-router-dom": "^6.21.0",
     "sass": "^1.58.1",
     "sort-by": "^0.0.2",
-    "typescript": "^5.3.3",
     "vite": "^5.0.10",
     "vite-tsconfig-paths": "^4.2.2",
     "web-vitals": "^3.5.0"
@@ -58,6 +57,7 @@
     ]
   },
   "devDependencies": {
-    "resolve-url-loader": "^5.0.0"
+    "resolve-url-loader": "^5.0.0",
+    "typescript": "^5.3.3"
   }
 }
