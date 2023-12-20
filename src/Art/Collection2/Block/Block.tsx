@@ -5,7 +5,7 @@ export default function Block(props)  {
   const [isHovering, setIsHovering] = useState(false);
   const [ animateFlag, setAnimateFlag] = useState(false)
   const [ duration, setDuration ] = useState(props.numSubItems > 1 ? Math.floor(Math.random() * (30 - 4) + 4) : Math.floor(Math.random() * (30 - 15) + 15))
-  const [ blockZIndex, setBlockZIndex ] = useState(props.horizon == true ? 9 : 100);
+  const [ blockZIndex, setBlockZIndex ] = useState(props.horizon == true ? 99 : 101);
 
   // Upon component mounting, set off animation flag to true.
   //    Prevents animation from starting before DOM is finished rendering
@@ -93,14 +93,14 @@ export default function Block(props)  {
   const styles = {
     animationName: animateFlag ? animationName : null, // If animation flag is TRUE, initiate animation
     backgroundColor: props.blockColor, // OG color passed in from parent function
-    // opacity: isHovering ? .80 : 1,
+    opacity: isHovering ? .80 : 1,
     transition: "all 2s ease-in-out", 
     height: props.blockHeight, 
     width: props.blockWidth, 
     zIndex: blockZIndex, 
     display: "flex", 
     flexDirection: "row",
-    // WebkitAnimation: `pulse ${duration}s linear infinite`, // define aniation through Webkit to pulse for DURATION seconds, linearly, infinately
+    WebkitAnimation: `pulse ${duration}s linear infinite`, // define aniation through Webkit to pulse for DURATION seconds, linearly, infinately
   }
   
   return (

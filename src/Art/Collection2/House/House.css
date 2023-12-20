@@ -1,14 +1,23 @@
+:root {
+  --house-color: #a43924;
+  --door-color: #c2c2c2;
+  --window-color: #96ecffe0;
+  --window-border-color: #ffffffe8;
+}
+
 .house-container {
-    z-index: 10;
+    z-index: 100;
     display: flex;
+    justify-content: center;
+    /* align-items: center; */
 }
 .house {
     position: absolute;
-    top: 50%;
-    left: 45%;
+    top: 50vh;
+    /* left: 45%; */
     height: 200px;
     width: 260px;
-    background:#a43924;
+    background: var(--house-color);
   }
   .house::before {
     content: '';
@@ -17,10 +26,10 @@
     left: 33px;
     height: 183px;
     width: 183.5px;
-    background: #a43924;
+    background: var(--house-color);
     transform: rotate(45deg);
-    border-top: 10px solid #85836b;
-    border-left: 10px solid #646359;
+    border-top: 10px solid #48493f;
+    border-left: 10px solid #1B2422;
     z-index: 2
   }
   .house::after {
@@ -30,7 +39,7 @@
     left: 15px;
     height: 70px;
     width: 30px;
-    background: rgb(130, 71, 52);
+    background: #824734;
     z-index: 1;
   }
   .window {
@@ -38,38 +47,41 @@
     left: 45px;
     height: 60px;
     width: 50px;
-    background: #b8b194;
+    background: var(--window-color);
     z-index: 3;
     position: absolute;
-
+    border-top: 7px solid var(--window-border-color);
+    border-right: solid var(--window-border-color);
+    border-bottom: solid var(--window-border-color);
+    border-left: solid var(--window-border-color);
   }
   .window::before,
   .window::after {
     content: '';
     position: absolute;
-    background: rgb(128, 108, 108);
+    background: var(--window-border-color);
   }
   .window::before {
     top: 0;
     left: 50%;
     height: 100%;
-    width: 1px;
+    width: 2px;
     position: absolute;
 
   }
   .window::after {
     top: 50%;
-    height: 1px;
+    height: 2px;
     width: 100%;
     position: absolute;
   }
  
   .door {
-    /* top: 70px; */
+    top: 70px;
     left: 150px;
     height: 130px;
     width: 70px;
-    background: #b3ac94;
+    background: var(--door-color);
     z-index: 3;
     position: absolute;
 
