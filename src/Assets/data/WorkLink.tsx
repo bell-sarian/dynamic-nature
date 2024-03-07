@@ -13,11 +13,11 @@ const WorkLinkData = [
         image: GrassyKnollImage,
         link: "/collection2"
     },
-    {
-        title: "Collection III: Static",
-        image: StaticImage,
-        link: "/collection3"
-    },
+    // {
+    //     title: "Collection III: Static",
+    //     image: StaticImage,
+    //     link: "/collection3"
+    // },
     
 ]
 
