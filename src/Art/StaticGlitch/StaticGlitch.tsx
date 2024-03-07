@@ -1,13 +1,13 @@
 import React, { Component, useState, useEffect } from "react";
-import "./Collection3.css";
-import Block from "./Block/Block";
+import "./StaticGlitch.css";
+import Block from "./Block/Block.tsx";
 // import Sun from "./Sun/Sun";
 // import Stars from './Stars/Stars';
-import InfoButton from "../../Components/InfoButton/InfoButton";
-import Modal from '../../Components/Modal/Modal';
-import { Dropdown } from "../../Components/Dropdown/Dropdown";
+import InfoButton from "../../Components/InfoButton/InfoButton.tsx";
+import Modal from '../../Components/Modal/Modal.tsx';
+import { Dropdown } from "../../Components/Dropdown/Dropdown.tsx";
 
-export default function Collection3()  {
+export default function StaticGlitch()  {
 
   const [modalOpen, setModalOpen] = useState(false);
   const [timeOfDay, setTimeOfDay] = useState("");

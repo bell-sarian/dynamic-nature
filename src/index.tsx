@@ -1,19 +1,19 @@
 import * as React from "react";;
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import ErrorPage from './error-page';
+import App from './App.tsx';
+import reportWebVitals from './reportWebVitals.tsx';
+import ErrorPage from './error-page.tsx';
 import {
   createBrowserRouter,
   RouterProvider,
   BrowserRouter
 } from "react-router-dom";
-import Collection1 from './Art/Collection1/Collection1';
+import OceanSunset from './Art/OceanSunset/OceanSunset.tsx';
 import NavBar from './Components/NavBar/NavBar.tsx';
-import Home from './Pages/Home/Home';
-import About from './Pages/About/About';
-import Work from './Pages/Work/Work';
+import Home from './Pages/Home/Home.tsx';
+import About from './Pages/About/About.tsx';
+import Work from './Pages/Work/Work.tsx';
 
 const router = createBrowserRouter([
   {
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
-    path: "/Collection1",
-    element: <Collection1 />,
+    path: "/OceanSunset",
+    element: <OceanSunset />,
     errorElement: <ErrorPage />
   },
   {

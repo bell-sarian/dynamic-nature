@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import "./Collection2.scss";
-import Block from "./Block/Block";
-import House from "./House/House";
+import "./GrassyKnoll.scss";
+import Block from "./Block/Block.tsx";
+import House from "./House/House.tsx";
 // import Sun from "./Sun/Sun";
 // import Stars from './Stars/Stars';
-import InfoButton from "../../Components/InfoButton/InfoButton";
-import Modal from "../../Components/Modal/Modal";
-import { Dropdown } from "../../Components/Dropdown/Dropdown";
+import InfoButton from "../../Components/InfoButton/InfoButton.tsx";
+import Modal from "../../Components/Modal/Modal.tsx";
+import { Dropdown } from "../../Components/Dropdown/Dropdown.tsx";
 
-export default function Collection2() {
+export default function GrassyKnoll() {
   const [modalOpen, setModalOpen] = useState(false);
   const [season, setSeason] = useState();
   const [grassColor, setGrassColor] = useState("#719951");

@@ -1,7 +1,7 @@
 import * as React from "react";;
 import { Link } from 'react-router-dom'
-import WorkLinkData from "../../Assets/data/WorkLink";
-import LinkTile from "../../Components/LinkTile/LinkTile";
+import WorkLinkData from "../../Assets/data/WorkLink.tsx";
+import LinkTile from "../../Components/LinkTile/LinkTile.tsx";
 import './Home.scss';
 
 

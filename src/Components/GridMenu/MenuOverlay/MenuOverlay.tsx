@@ -6,13 +6,13 @@ import {
     RouterProvider,
   } from "react-router-dom";
 
-import Collection1 from "../../../Art/Collection1/Collection1";
-import App from "../../../App";
-import About from "../../../Pages/About/About";
-import Home from "../../../Pages/Home/Home";
-import Work from "../../../Pages/Work/Work";
+import OceanSunset from "../../../Art/OceanSunset/OceanSunset";
+import App from "../../../App.tsx";
+import About from "../../../Pages/About/About.tsx";
+import Home from "../../../Pages/Home/Home.tsx";
+import Work from "../../../Pages/Work/Work.tsx";
 
-import GridItem from "../GridItem/GridItem";
+import GridItem from "../GridItem/GridItem.tsx";
 
 
 export default function MenuOverlay({ menuOpen, setMenuOpen})  {

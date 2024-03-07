@@ -6,13 +6,18 @@ const WorkLinkData = [
     {
         title: "Collection I: Ocean Horizon",
         image: OceanSusnetImage,
-        link: "/collection1"
+        link: "/OceanSunset"
     },
     {
         title: "Collection II: Grassy Knoll",
         image: GrassyKnollImage,
-        link: "/collection2"
+        link: "/GrassyKnoll"
     },
+    {
+        title: "ThreeJS",
+        image: GrassyKnollImage,
+        link: "/ThreejsTest"
+    }
     // {
     //     title: "Collection III: Static",
     //     image: StaticImage,

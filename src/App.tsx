@@ -7,15 +7,15 @@ import {
   Link
 } from "react-router-dom";
 import { motion } from 'framer-motion';
-import Home from './Pages/Home/Home';
-import About from './Pages/About/About';
-import Work from "./Pages/Work/Work";
-import Collection1 from './Art/Collection1/Collection1';
-import Collection2 from './Art/Collection2/Collection2';
-import Collection3 from "./Art/Collection3/Collection3";
+import Home from './Pages/Home/Home.tsx';
+import About from './Pages/About/About.tsx';
+import Work from "./Pages/Work/Work.tsx";
+import OceanSunset from './Art/OceanSunset/OceanSunset.tsx';
+import GrassyKnoll from './Art/GrassyKnoll/GrassyKnoll.tsx';
+// import ThreejsTest from './Art/ThreejsTest/ThreejsTest.tsx';
 // import Cursor from "./Components/Cursor/Cursor";
 
-function App() {
+export default function App() {
 
 //   const [mousePosition, setMousePosition] = useState({
 //     x: 0,
@@ -56,10 +56,11 @@ function App() {
        <Routes>
           <Route index element={<Home />} />
           <Route path="About" element={<About />} />
-          <Route path="Collection1" element={<Collection1 />} />
-          <Route path="Collection2" element={<Collection2 />} />
-          <Route path="Collection3" element={<Collection3 />} />
+          <Route path="OceanSunset" element={<OceanSunset />} />
+          <Route path="GrassyKnoll" element={<GrassyKnoll />} />
+          {/* <Route path="Collection3" element={<Collection3 />} /> */}
           <Route path="Work" element={<Work />} />
+          {/* <Route path="ThreejsTest" element={<ThreejsTest />} /> */}
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
@@ -70,5 +71,4 @@ function App() {
   );
 }
 
-export default App;
-
+ 
