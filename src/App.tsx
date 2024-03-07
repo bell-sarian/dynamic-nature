@@ -12,7 +12,7 @@ import About from './Pages/About/About.tsx';
 import Work from "./Pages/Work/Work.tsx";
 import OceanSunset from './Art/OceanSunset/OceanSunset.tsx';
 import GrassyKnoll from './Art/GrassyKnoll/GrassyKnoll.tsx';
-// import ThreejsTest from './Art/ThreejsTest/ThreejsTest.tsx';
+import ThreejsTest from './Art/ThreejsTest/ThreejsTest.tsx';
 // import Cursor from "./Components/Cursor/Cursor";
 
 export default function App() {
@@ -60,7 +60,7 @@ export default function App() {
           <Route path="GrassyKnoll" element={<GrassyKnoll />} />
           {/* <Route path="Collection3" element={<Collection3 />} /> */}
           <Route path="Work" element={<Work />} />
-          {/* <Route path="ThreejsTest" element={<ThreejsTest />} /> */}
+          <Route path="ThreejsTest" element={<ThreejsTest />} />
 
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit

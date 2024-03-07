@@ -14,6 +14,7 @@ import NavBar from './Components/NavBar/NavBar.tsx';
 import Home from './Pages/Home/Home.tsx';
 import About from './Pages/About/About.tsx';
 import Work from './Pages/Work/Work.tsx';
+import ThreejsTest from './Art/ThreejsTest/ThreejsTest.tsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
   {
     path: "/OceanSunset",
     element: <OceanSunset />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/ThreejsTest",
+    element: <ThreejsTest />,
     errorElement: <ErrorPage />
   },
   {
