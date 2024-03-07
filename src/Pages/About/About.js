@@ -1,9 +1,4 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom"
-
-
+import * as React from "react";;
 export default function About() {
-  return (
-    <div></div>
-  )
+    return (React.createElement("div", null));
 }

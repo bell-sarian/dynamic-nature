@@ -1,36 +1,16 @@
-import React, { useState, useEffect } from "react";
-import styles from './Modal.css';
+import * as React from "react";;
+import './Modal.css';
 import CloseIcon from '@mui/icons-material/Close';
-
-export default function Modal({modalOpen, setModalOpen, content})  {
-
-
-  
-  return (
-    <div>
-    {modalOpen ? 
-        (  
-            <div className="outer-modal-container" onClick={() => setModalOpen(false)}>
-                <div className="modal-container" >
-                    <div className="close-button" >
-                        <button onClick={() => setModalOpen(false)}><CloseIcon /></button>
-                    </div>
-                    <div className="content">
-                        {content.map((item, index) => {
-                            return (
-                                <p>{item}</p>
-                            )
-                        })}
-                        </div>
-                </div>
-            </div>
-        )
+export default function Modal({ modalOpen, setModalOpen, content }) {
+    return (React.createElement("div", null, modalOpen ?
+        (React.createElement("div", { className: "outer-modal-container", onClick: () => setModalOpen(false) },
+            React.createElement("div", { className: "modal-container" },
+                React.createElement("div", { className: "close-button" },
+                    React.createElement("button", { onClick: () => setModalOpen(false) },
+                        React.createElement(CloseIcon, null))),
+                React.createElement("div", { className: "content" }, content.map((item, index) => {
+                    return (React.createElement("p", null, item));
+                })))))
         :
-        (<div/>)
+            (React.createElement("div", null))));
 }
-</div>
-    
-  );
-  
-}
-
