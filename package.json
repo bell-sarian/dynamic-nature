@@ -60,5 +60,21 @@
   "devDependencies": {
     "resolve-url-loader": "^5.0.0",
     "typescript": "^5.3.3"
-  }
+  },
+  "description": "natured based computer art using web programming.",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "dynamic-nature"
+  },
+  "keywords": [
+    "web",
+    "graphics",
+    "web",
+    "design",
+    "web",
+    "art"
+  ],
+  "author": "Bell Sarian",
+  "license": "ISC"
 }
