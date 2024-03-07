@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";;
 import "./GridMenu.scss";
 import GridIcon from "../../Assets/grid_icon.svg";
 import GridIconDark from "../../Assets/grid_icon_dark.svg";

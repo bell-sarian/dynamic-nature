@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";;
 import "./MenuOverlay.scss";
 import App from "../../../App";
 import About from "../../../Pages/About/About";

@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";;
 import "./House.css";
 export default function House(props) {
   console.log("house");

@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";;
 import './Modal.css';
 import CloseIcon from '@mui/icons-material/Close';
 export default function Modal({ modalOpen, setModalOpen, content }) {
