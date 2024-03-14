@@ -1,0 +1,17 @@
+.ThreejsTest_container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 0;
+    margin-bottom: 100px;
+    z-index: 0;
+    transition: all .9s ease-in-out;
+    overflow-y: hidden;
+}
+

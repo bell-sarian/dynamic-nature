@@ -1,5 +1,6 @@
 import OceanSusnetImage from '../OceanSunsetPreview.png';
 import GrassyKnollImage from '../GrassyKnollPreview.png';
+import ThreejsTest from '../ThreejsTest.png';
 import StaticImage from '../StaticPreview.png';
 
 const WorkLinkData = [
@@ -15,7 +16,7 @@ const WorkLinkData = [
     },
     {
         title: "ThreeJS",
-        image: GrassyKnollImage,
+        image: ThreejsTest,
         link: "/ThreejsTest"
     }
     // {
